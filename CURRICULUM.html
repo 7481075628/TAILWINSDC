@@ -1,0 +1,1277 @@
+<!DOCTYPE html><html lang="es"><head><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin /><meta charSet="utf-8"/><meta charset="utf-8"/><meta name="robots" content="noindex, nofollow"/><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><meta name="format-detection" content="telephone=no"/><script id="inline-script-1">window.RDL = (window.RDL || {});
+            var experimentTraits = null;
+            RDL.UserClaims = {};
+            RDL.FeatureCodesJson = "";
+            if (localStorage.getItem('toupv') == 1) {
+                var toupvDOM = document.getElementById('toupv');
+                if (toupvDOM) {
+                    toupvDOM.classList.add('d-none');
+                }
+            }
+            try {
+                RDL.Portal = JSON.parse('{"culture":"es-ES","url":"livecareer.es","portalUrl":"livecareer.es","slug":"/crear-cv","basePath":"/crear-cv","portalCd":"les","productCd":"rsm","viewName":"","defaultSkin":"MLL2","portalId":"22","gtmKey1":"GTM-MNPFQ6L","gtmKey2":"GTM-PBL3F6X","newRelicId":"135377353","blobRepo":"https://configservicestorage.blob.core.windows.net/livecareerrepository/","blobRepoTest":"https://configservicestoragetest.blob.core.windows.net/livecareerrepository/","blobContentDevURL":"lccontentdev.blob.core.windows.net/","rewriteBlobContent":true,"removeOptionsCall":true,"removeVulnerableText":true,"useFileNamingConvention":true,"isOmnibusBaselined":true,"excludefloatingReg":false,"excludeSkillRecommendation":false,"preventSpellCheckFreeze":true,"getFeatureCodes":false,"loadClientExperimentJS":true,"useTipPageRouting":true,"commonSegment":true,"avoidloadingsvg":true,"useExperienceRouting":true,"imageOptimizationRewrite":true,"ebBaseUrl":"https://www.livecareer.es/eb/","useAssetsPath":true}');
+                RDL.clnDomain = "cover-letter-now.com";
+                experimentTraits = {"Experiment: ": "" }
+                RDL.FeatureCodesJson = '';
+                RDL.recommendationJson = '';   
+                RDL.countryDetails =  '';               
+            }
+            catch (ex) {
+                RDL.UserClaims = {};
+            }
+            //Code to set claims
+        
+        
+            /**constructor function**/
+            (function () {
+                var readDisableTest = function () { }
+        
+                readDisableTest.prototype.init = function () {
+                    if (typeof this.getQSOnLoad == "function" && this.getQSOnLoad("disabletestcookie") != "added" && typeof this.createCookie == "function") {
+        
+                        var disableTestVar = this.getQSOnLoad("disabletests");
+                        var runtestVar = this.getQSOnLoad("runtest");
+        
+                        if (runtestVar) {
+                            this.createCookie("runtest", runtestVar, 0, window.location.host.substr(window.location.host.indexOf('.')));
+                        }
+                        if (disableTestVar) {
+                            this.createCookie("disabletests", disableTestVar, 0, window.location.host.substr(window.location.host.indexOf('.')));
+                        }
+        
+                        if (disableTestVar || runtestVar) {
+                            window.location.href = window.location.href + "&disabletestcookie=added";
+                        }
+                    }
+                }
+        
+                readDisableTest.prototype.getQSOnLoad = function (field) {
+                    var href = window.location.href;
+                    var qstring = "";
+                    if (href.indexOf(field) >= 0) {
+                        var reg = new RegExp('[?&]' + field + '=([^&#]*)', 'i');
+                        var string = reg.exec(href);
+                        var rtColl = string[1].split(",");
+                        for (var i = 0; i < rtColl.length; i++) {
+                            var currElem = rtColl[i];
+                            if (currElem) {
+                                qstring = i > 0 ? (qstring + ("," + currElem.substr(0, currElem.indexOf("_") + 2))) : currElem.replace(",", "");
+                            }
+                        }
+                    }
+                    return qstring ? qstring : null;
+                };
+        
+                readDisableTest.prototype.createCookie = function (name, value, days, domain) {
+                    var expires = "";
+                    var _domain = "";
+                    if (days) {
+                        var date = new Date();
+                        date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+                        expires = "; expires=" + date.toGMTString();
+                    } else
+                        expires = "";
+        
+                    if (domain) {
+                        _domain = "; domain=" + domain;
+                    }
+                    document.cookie = name + "=" + value + expires + _domain + "; path=/;";
+                };
+               
+                var classObj = new readDisableTest();
+                classObj.init();
+        
+                var visitorExperimentHelper= function(){};
+        
+                 visitorExperimentHelper.prototype.getCookie = function(name){
+                          var value = "; "+document.cookie;
+                          var parts = value.split("; "+name+"=");
+                          if (parts.length === 2) return parts.pop().split(';').shift();
+                }
+                  visitorExperimentHelper.prototype.getDomainName=function(){
+                        var host = window.location.hostname;
+                        var domainName = host.match(/^(?:.*?\.)?([a-zA-Z0-9\-_]{3,}\.(?:\w{2,8}|\w{2,4}\.\w{2,4}))$/)[1];
+                        return domainName;
+                  }
+                 visitorExperimentHelper.prototype.closeLongLoader=function(isMobile){
+                     if (document.getElementById("longLoader") && !isMobile){
+                      document.getElementById("longLoader").classList.add("d-none");
+                     document.getElementsByTagName("body")[0].classList.remove("disable-scroll");
+                    }
+        
+               }
+        
+                visitorExperimentHelper.prototype.startLongLoader = function (isMobile){
+                    if (document.getElementById("longLoader") && !isMobile){
+                   document.getElementById("longLoader").classList.remove("d-none");
+                   document.getElementsByTagName("body")[0].classList.add("disable-scroll");
+                 }
+              }
+        
+        
+                 visitorExperimentHelper.prototype.getExperimentVariantFromCookie = function (experimentID) {
+                   var variant=0;
+                   var runtestCookie=this.getCookie("runtest");
+                   if(runtestCookie)
+                   {
+                    var experiment = runtestCookie.split(',').filter(function (i) {
+                    return i.indexOf(experimentID + '_') != -1;
+                  });
+                   if(experiment && experiment.length>0)
+                   {
+                    var variantDetails=experiment[0].split('_');
+                    if(variantDetails.length==2)
+                        variant=experiment[0].split('_')[1];
+                   }
+                 }
+                 return variant;
+                }
+        
+        
+            visitorExperimentHelper.prototype.getVisitorVariant=function(experimentID,visitorID,currentExpObj){
+               var variant=0;
+               var xhttp=new XMLHttpRequest();
+                var ebBaseUrl="https://www.livecareer.es/eb/";
+               var currentInstance=this;
+               xhttp.open("GET", ebBaseUrl + 'api/v1/visitors/' + visitorID+ '/experiments/' +experimentID);
+               xhttp.send();
+               xhttp.onerror=function(){
+                  currentInstance.startLongLoader(currentExpObj.isMobile);
+                   window.RDL.disableHIW = false;
+                   if(typeof currentExpObj.defaultCallback == "function") {
+                       currentExpObj.defaultCallback();
+                   }
+               }
+               xhttp.onload = function() {
+                            if(xhttp.responseText){
+                                var response=JSON.parse(xhttp.responseText);
+                                if(response.isSuccess){
+                                    variant=response.data.variant;
+                                     if(typeof classObj.createCookie == "function" && typeof currentInstance.getCookie == "function"){
+                                           var runTestCookie=currentInstance.getCookie("runtest");
+                                           if(runTestCookie && runTestCookie != ""){
+                                             runTestCookie=runTestCookie + "," + experimentID + "_" + variant;
+                                          }else{
+                                               runTestCookie=experimentID + "_" + variant;
+                                          }
+        
+                                          if(typeof currentExpObj['callback'] == "function" && variant == currentExpObj['variant']){
+                                            currentExpObj['callback']();
+                                          }else if(currentExpObj['disableLoaderBeforeResponse']){
+                                              currentInstance.startLongLoader(currentExpObj.isMobile);
+                                              if(typeof currentExpObj.defaultCallback == "function") {
+                                                  currentExpObj.defaultCallback();
+                                              }
+                                         }
+                                          classObj.createCookie("runtest",runTestCookie,0, currentInstance.getDomainName());
+                                       }
+                                      window.RDL[currentExpObj.rdlKey]=variant;
+                                      window.RDL.disableHIW=false;
+                                 }else{
+                                     window.RDL.disableHIW=false;
+                                    currentInstance.startLongLoader(currentExpObj.isMobile);
+                                    if(typeof currentExpObj.defaultCallback == "function") {
+                                        currentExpObj.defaultCallback();
+                                    }
+                                 }
+                           }
+                        }
+        
+           }
+        
+              visitorExperimentHelper.prototype.merge_options=function(obj1,obj2){
+              var obj3 = {};
+              for (var attrname in obj1) { obj3[attrname] = obj1[attrname]; }
+              for (var attrname in obj2) { obj3[attrname] = obj2[attrname]; }
+              return obj3;
+           }
+        
+              visitorExperimentHelper.prototype.GetQueryString=function(field) {
+                    var href = window.location.href;
+                    var reg = new RegExp('[?&]' + field + '=([^&#]*)', 'i');
+                    var string = reg.exec(href);
+                    return string ? string[1] : null;
+              }
+        
+           visitorExperimentHelper.prototype.getExperimentVariantByQueryParams=function(experimentObj){
+               var restProcess=false;
+               var currentInstance=this;
+                 if(currentInstance.GetQueryString(experimentObj['queryParam']) == "true"){
+                       RDL[experimentObj.rdlKey]=experimentObj['variant'];
+                       if(typeof experimentObj.callback == "function"){
+                           experimentObj.callback();
+                       }
+                       var runTestCookie=currentInstance.getCookie("runtest");
+                       if(runTestCookie && runTestCookie != ""){
+                          runTestCookie=runTestCookie + "," + experimentObj['id'] + "_" + experimentObj['variant'];
+                        }else{
+                             runTestCookie=experimentObj['id'] + "_" + experimentObj['variant'];
+                       }
+                        var expVariant=currentInstance.getExperimentVariantFromCookie(experimentObj['id']);
+                       if(!expVariant)
+                       classObj.createCookie("runtest",runTestCookie,0, currentInstance.getDomainName());
+        
+                  }else{
+                    restProcess=true;
+                  }
+             return restProcess;
+         }
+        
+        
+             visitorExperimentHelper.prototype.conductVisitorExperiment=function(currentExpObj,visitorID){
+        
+               var variant=0;
+               var xhttp=new XMLHttpRequest();
+               var ebBaseUrl="https://www.livecareer.es/eb/";
+               var currentInstance=this;
+        
+               xhttp.open("POST",ebBaseUrl+'api/v1/visitors/' + visitorID+ '/experiments/' +currentExpObj['id']+"/conduct")
+               xhttp.setRequestHeader('Content-type', 'application/json')
+               xhttp.send(JSON.stringify({
+                visitor_id:visitorID,
+                experiment_id:currentExpObj['id']
+               }));
+        
+               xhttp.onerror=function(){
+                    window.RDL.disableHIW = false;
+                   if (typeof currentExpObj.defaultCallback == "function") {
+                       currentExpObj.defaultCallback();
+                   }
+                   currentInstance.startLongLoader(currentExpObj.isMobile);
+               }
+               xhttp.onload = function() {
+        
+                    if(xhttp.responseText){
+                        var response=JSON.parse(xhttp.responseText);
+                        if(response.data){
+                            variant=response.data.variant;
+                            if(typeof classObj.createCookie == "function" && typeof currentInstance.getCookie == "function"){
+                                           var runTestCookie=currentInstance.getCookie("runtest");
+                                           if(runTestCookie && runTestCookie != ""){
+                                             runTestCookie=runTestCookie + "," + currentExpObj['id'] + "_" + variant;
+                                          }else{
+                                               runTestCookie=currentExpObj['id'] + "_" + variant;
+                                          }
+                                         classObj.createCookie("runtest",runTestCookie,0, currentInstance.getDomainName());
+                                       }
+                                      window.RDL[currentExpObj.rdlKey]=variant;
+                                      if(typeof currentExpObj.callback == "function" && variant == currentExpObj['variant']){
+                                            currentExpObj.callback();
+                                      }else if(currentExpObj['disableLoaderBeforeResponse']){
+                                          currentInstance.startLongLoader(currentExpObj.isMobile);
+                                          if (typeof currentExpObj.defaultCallback == "function") {
+                                              currentExpObj.defaultCallback();
+                                          }
+                                      }
+                                      window.RDL.disableHIW=false;
+        
+                        }else{
+                                 window.RDL.disableHIW=false;
+                                 currentInstance.startLongLoader(currentExpObj.isMobile);
+                                 if (typeof currentExpObj.defaultCallback == "function") {
+                                    currentExpObj.defaultCallback();
+                                 }
+                        }
+        
+                    }
+        
+               }
+        
+         }
+        
+        
+              visitorExperimentHelper.prototype.init =function (experimentObj,isLiteBuilder){
+        
+                  if ((this.getCookie("disabletests") == 1) && (this.getCookie("runtest") != experimentObj.id + "_" + experimentObj.variant)) {
+                      if (typeof experimentObj.defaultCallback == "function") {
+                          experimentObj.defaultCallback();
+                      }
+                    return 0;
+                  }
+        
+        
+                  var interval;
+                  var currentInstance=this;
+                  var restExperimentObj=this.getExperimentVariantByQueryParams(experimentObj);
+                  window.RDL.disableHIW=false;
+                  if(experimentObj['disableLoaderBeforeResponse']){
+                          window.RDL.disableHIW=true;
+                          currentInstance.closeLongLoader(experimentObj.isMobile);
+                        }else{
+                          currentInstance.startLongLoader(experimentObj.isMobile);
+                     }
+        
+                  var expVariant=currentInstance.getExperimentVariantFromCookie(experimentObj['id']);
+        
+                  if(expVariant){
+                    RDL[experimentObj.rdlKey]=expVariant;
+                    if(typeof experimentObj.callback == "function" && experimentObj.variant == expVariant){
+                        experimentObj.callback();
+                        window.RDL.disableHIW=false;
+                    }else if(experimentObj['disableLoaderBeforeResponse']){
+                        window.RDL.disableHIW = false;
+                        if (typeof experimentObj.defaultCallback == "function") {
+                            experimentObj.defaultCallback();
+                        }
+                        currentInstance.startLongLoader(experimentObj.isMobile);
+                    }
+        
+                     return 0;
+                  }
+        
+        
+        
+                  if(!interval && restExperimentObj){
+                    return new Promise(function(resolve,reject){
+                        var timer=0;
+                        var visitorID=currentInstance.getCookie("vstr");
+                        if(isLiteBuilder){
+                         visitorID=currentInstance.getCookie("spvstr");
+                        }
+                        if(!visitorID){
+                            timer=50;
+                        }
+                     interval=setInterval(function(){
+                        if(typeof currentInstance.getCookie != "function" || typeof currentInstance.GetQueryString != "function"  ||
+                        typeof currentInstance.getVisitorVariant !="function"){
+                            return '';
+                         }
+                        visitorID=currentInstance.getCookie("vstr");
+                        if(isLiteBuilder){
+                         visitorID=currentInstance.getCookie("spvstr");
+                        }
+                         if(visitorID){
+                                clearInterval(interval);
+                                if (!expVariant) {
+                                    var isConductExperiment = true;
+                                    var expUserStatus = currentInstance.getCookie("UserStatus");
+                                    if(expUserStatus) {
+                                        expUserStatus = JSON.parse(expUserStatus);
+                                        isConductExperiment = expUserStatus && expUserStatus.User ? (expUserStatus.User.Role == 0?true:false) : true;
+                                    }
+                                    window.RDL.disableHIW=true;
+                                    if(!experimentObj['allowConduction']){
+                                        currentInstance.getVisitorVariant(experimentObj['id'],visitorID,experimentObj);
+                                    } else {
+                                        if (isConductExperiment) {
+                                            currentInstance.conductVisitorExperiment(experimentObj, visitorID);
+                                        } else {
+                                            currentInstance.getVisitorVariant(experimentObj['id'], visitorID, experimentObj);
+                                        }
+                                    }
+                                }
+                                resolve("");
+                            }
+        
+                     },timer);
+        
+        
+                    })
+                  }
+        
+        
+           }
+        
+        
+             window.RDL.visitorExperimentHelper = new visitorExperimentHelper();
+        
+            })();
+                  function InitializeMetricsForPage(e, f, a)
+                  {             
+                      var initialurl = location.protocol + "//" + location.host
+                      var assetUrl = "https://assets.livecareer.es";              
+                      if (assetUrl) {
+                          initialurl = assetUrl;
+                      }              
+                        (null == a || void 0 == a) && (a = { useDevJs: !1 }),
+                ("" == a.commonScriptsUrl || void 0 == a.commonScriptsUrl) &&
+                        (a.commonScriptsUrl = initialurl+"/blob/common"),
+                ("" == a.clientEventsAPIUrl || void 0 == a.clientEventsAPIUrl) &&
+                (a.clientEventsAPIUrl =
+                    location.protocol + "//" + location.host + "/clientevents");
+                    var c =
+                        a.commonScriptsUrl +
+                        "/scripts/splashEventStream" +
+                        (!0 == a.useDevJs ? "" : ".min") +
+                        ".js?v=" +
+                        (void 0 == a.besVer ? "latest" : a.besVer),
+                d =
+                    a.commonScriptsUrl +
+                    "/scripts/splashMetrics" +
+                    (!0 == a.useDevJs ? "" : ".min") +
+                    ".js?v=" +
+                    (void 0 == a.muVer ? "latest" : a.muVer),
+                b = [];
+                    b.push(loadDynamicScriptFileAsync(c, !0)),
+                b.push(loadDynamicScriptFileAsync(d, !0)),
+                Promise.all(b).then(function() {
+                        var b = MetricsUtil.ClassInitializers.getNewConfigurationObject(a.MuCfg);
+                        (b.Value_PortalCD = e),
+                        (b.Value_ProductCD = f),
+                        (b.splashEventsUrl = c),
+                        (b.useForcePushForAllEvents =
+                            void 0 == a.useForcePushForAllEvents || a.useForcePushForAllEvents),
+                        (b.SplashConfig.AjaxDetails.eventsPostEndpointUrl =
+                            a.clientEventsAPIUrl +
+                            "/" +
+                            b.SplashConfig.AjaxDetails.eventsPostEndpointUrl),
+                        MetricsUtil.initializeAsync(window, b);
+                    });
+                }
+        
+                function loadDynamicScriptFileAsync(a, b)
+                {
+                    return new Promise(function(e, f) {
+                        try
+                    {
+                        var c = document.createElement("script");
+                        c.src = a, c.onload = e, c.async = null == b || null == b || b, c.onerror = function(a) {
+                            f(a, c)
+                            };                    
+                        var d = document.getElementsByTagName("script")[0];
+                        d.parentNode.insertBefore(c, d)
+                        }
+                    catch (g)
+                    {
+                        f(g)
+                        }
+                })
+                }
+        
+            var addParamsData = {MuCfg:{enableWebVitals:true}};
+            InitializeMetricsForPage('LES', 'RSM', addParamsData);      
+        </script><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com"/><link rel="stylesheet" href="https://assets.livecareer.es/crear-cv/build/stylesheets/rbrwz/les/main-1.0.0.18.css"/><script>var deviceType =  "desktop";
+                        function addNewRelic(applicationId, newRelicSamplingPercent) {
+                            var y = Math.floor((Math.random() * 10) + 1); var x = y % 5; if (x == 0) {
+                                window.NREUM || (NREUM = {}), __nr_require = function (t, e, n) { function r(n) { if (!e[n]) { var o = e[n] = { exports: {} }; t[n][0].call(o.exports, function (e) { var o = t[n][1][e]; return r(o || e) }, o, o.exports) } return e[n].exports } if ("function" == typeof __nr_require) return __nr_require; for (var o = 0; o < n.length; o++)r(n[o]); return r }({ 1: [function (t, e, n) { function r(t) { try { s.console && console.log(t) } catch (e) { } } var o, i = t("ee"), a = t(25), s = {}; try { o = localStorage.getItem("__nr_flags").split(","), console && "function" == typeof console.log && (s.console = !0, o.indexOf("dev") !== -1 && (s.dev = !0), o.indexOf("nr_dev") !== -1 && (s.nrDev = !0)) } catch (c) { } s.nrDev && i.on("internal-error", function (t) { r(t.stack) }), s.dev && i.on("fn-err", function (t, e, n) { r(n.stack) }), s.dev && (r("NR AGENT IN DEVELOPMENT MODE"), r("flags: " + a(s, function (t, e) { return t }).join(", "))) }, {}], 2: [function (t, e, n) { function r(t, e, n, r, s) { try { l ? l -= 1 : o(s || new UncaughtException(t, e, n), !0) } catch (f) { try { i("ierr", [f, c.now(), !0]) } catch (d) { } } return "function" == typeof u && u.apply(this, a(arguments)) } function UncaughtException(t, e, n) { this.message = t || "Uncaught error with no additional information", this.sourceURL = e, this.line = n } function o(t, e) { var n = e ? null : c.now(); i("err", [t, n]) } var i = t("handle"), a = t(26), s = t("ee"), c = t("loader"), f = t("gos"), u = window.onerror, d = !1, p = "nr@seenError", l = 0; c.features.err = !0, t(1), window.onerror = r; try { throw new Error } catch (h) { "stack" in h && (t(13), t(12), "addEventListener" in window && t(6), c.xhrWrappable && t(14), d = !0) } s.on("fn-start", function (t, e, n) { d && (l += 1) }), s.on("fn-err", function (t, e, n) { d && !n[p] && (f(n, p, function () { return !0 }), this.thrown = !0, o(n)) }), s.on("fn-end", function () { d && !this.thrown && l > 0 && (l -= 1) }), s.on("internal-error", function (t) { i("ierr", [t, c.now(), !0]) }) }, {}], 3: [function (t, e, n) { t("loader").features.ins = !0 }, {}], 4: [function (t, e, n) { function r() { L++ , C = g.hash, this[u] = y.now() } function o() { L-- , g.hash !== C && i(0, !0); var t = y.now(); this[h] = ~~this[h] + t - this[u], this[d] = t } function i(t, e) { E.emit("newURL", ["" + g, e]) } function a(t, e) { t.on(e, function () { this[e] = y.now() }) } var s = "-start", c = "-end", f = "-body", u = "fn" + s, d = "fn" + c, p = "cb" + s, l = "cb" + c, h = "jsTime", m = "fetch", v = "addEventListener", w = window, g = w.location, y = t("loader"); if (w[v] && y.xhrWrappable) { var x = t(10), b = t(11), E = t(8), O = t(6), R = t(13), P = t(7), T = t(14), N = t(9), M = t("ee"), S = M.get("tracer"); t(16), y.features.spa = !0; var C, L = 0; M.on(u, r), M.on(p, r), M.on(d, o), M.on(l, o), M.buffer([u, d, "xhr-done", "xhr-resolved"]), O.buffer([u]), R.buffer(["setTimeout" + c, "clearTimeout" + s, u]), T.buffer([u, "new-xhr", "send-xhr" + s]), P.buffer([m + s, m + "-done", m + f + s, m + f + c]), E.buffer(["newURL"]), x.buffer([u]), b.buffer(["propagate", p, l, "executor-err", "resolve" + s]), S.buffer([u, "no-" + u]), N.buffer(["new-jsonp", "cb-start", "jsonp-error", "jsonp-end"]), a(T, "send-xhr" + s), a(M, "xhr-resolved"), a(M, "xhr-done"), a(P, m + s), a(P, m + "-done"), a(N, "new-jsonp"), a(N, "jsonp-end"), a(N, "cb-start"), E.on("pushState-end", i), E.on("replaceState-end", i), w[v]("hashchange", i, !0), w[v]("load", i, !0), w[v]("popstate", function () { i(0, L > 1) }, !0) } }, {}], 5: [function (t, e, n) { function r(t) { } if (window.performance && window.performance.timing && window.performance.getEntriesByType) { var o = t("ee"), i = t("handle"), a = t(13), s = t(12), c = "learResourceTimings", f = "addEventListener", u = "resourcetimingbufferfull", d = "bstResource", p = "resource", l = "-start", h = "-end", m = "fn" + l, v = "fn" + h, w = "bstTimer", g = "pushState", y = t("loader"); y.features.stn = !0, t(8), "addEventListener" in window && t(6); var x = NREUM.o.EV; o.on(m, function (t, e) { var n = t[0]; n instanceof x && (this.bstStart = y.now()) }), o.on(v, function (t, e) { var n = t[0]; n instanceof x && i("bst", [n, e, this.bstStart, y.now()]) }), a.on(m, function (t, e, n) { this.bstStart = y.now(), this.bstType = n }), a.on(v, function (t, e) { i(w, [e, this.bstStart, y.now(), this.bstType]) }), s.on(m, function () { this.bstStart = y.now() }), s.on(v, function (t, e) { i(w, [e, this.bstStart, y.now(), "requestAnimationFrame"]) }), o.on(g + l, function (t) { this.time = y.now(), this.startPath = location.pathname + location.hash }), o.on(g + h, function (t) { i("bstHist", [location.pathname + location.hash, this.startPath, this.time]) }), f in window.performance && (window.performance["c" + c] ? window.performance[f](u, function (t) { i(d, [window.performance.getEntriesByType(p)]), window.performance["c" + c]() }, !1) : window.performance[f]("webkit" + u, function (t) { i(d, [window.performance.getEntriesByType(p)]), window.performance["webkitC" + c]() }, !1)), document[f]("scroll", r, { passive: !0 }), document[f]("keypress", r, !1), document[f]("click", r, !1) } }, {}], 6: [function (t, e, n) { function r(t) { for (var e = t; e && !e.hasOwnProperty(u);)e = Object.getPrototypeOf(e); e && o(e) } function o(t) { s.inPlace(t, [u, d], "-", i) } function i(t, e) { return t[1] } var a = t("ee").get("events"), s = t("wrap-function")(a, !0), c = t("gos"), f = XMLHttpRequest, u = "addEventListener", d = "removeEventListener"; e.exports = a, "getPrototypeOf" in Object ? (r(document), r(window), r(f.prototype)) : f.prototype.hasOwnProperty(u) && (o(window), o(f.prototype)), a.on(u + "-start", function (t, e) { var n = t[1], r = c(n, "nr@wrapped", function () { function t() { if ("function" == typeof n.handleEvent) return n.handleEvent.apply(n, arguments) } var e = { object: t, "function": n }[typeof n]; return e ? s(e, "fn-", null, e.name || "anonymous") : n }); this.wrapped = t[1] = r }), a.on(d + "-start", function (t) { t[1] = this.wrapped || t[1] }) }, {}], 7: [function (t, e, n) { function r(t, e, n) { var r = t[e]; "function" == typeof r && (t[e] = function () { var t = i(arguments), e = {}; o.emit(n + "before-start", [t], e); var a; e[m] && e[m].dt && (a = e[m].dt); var s = r.apply(this, t); return o.emit(n + "start", [t, a], s), s.then(function (t) { return o.emit(n + "end", [null, t], s), t }, function (t) { throw o.emit(n + "end", [t], s), t }) }) } var o = t("ee").get("fetch"), i = t(26), a = t(25); e.exports = o; var s = window, c = "fetch-", f = c + "body-", u = ["arrayBuffer", "blob", "json", "text", "formData"], d = s.Request, p = s.Response, l = s.fetch, h = "prototype", m = "nr@context"; d && p && l && (a(u, function (t, e) { r(d[h], e, f), r(p[h], e, f) }), r(s, "fetch", c), o.on(c + "end", function (t, e) { var n = this; if (e) { var r = e.headers.get("content-length"); null !== r && (n.rxSize = r), o.emit(c + "done", [null, e], n) } else o.emit(c + "done", [t], n) })) }, {}], 8: [function (t, e, n) { var r = t("ee").get("history"), o = t("wrap-function")(r); e.exports = r; var i = window.history && window.history.constructor && window.history.constructor.prototype, a = window.history; i && i.pushState && i.replaceState && (a = i), o.inPlace(a, ["pushState", "replaceState"], "-") }, {}], 9: [function (t, e, n) { function r(t) { function e() { c.emit("jsonp-end", [], p), t.removeEventListener("load", e, !1), t.removeEventListener("error", n, !1) } function n() { c.emit("jsonp-error", [], p), c.emit("jsonp-end", [], p), t.removeEventListener("load", e, !1), t.removeEventListener("error", n, !1) } var r = t && "string" == typeof t.nodeName && "script" === t.nodeName.toLowerCase(); if (r) { var o = "function" == typeof t.addEventListener; if (o) { var a = i(t.src); if (a) { var u = s(a), d = "function" == typeof u.parent[u.key]; if (d) { var p = {}; f.inPlace(u.parent, [u.key], "cb-", p), t.addEventListener("load", e, !1), t.addEventListener("error", n, !1), c.emit("new-jsonp", [t.src], p) } } } } } function o() { return "addEventListener" in window } function i(t) { var e = t.match(u); return e ? e[1] : null } function a(t, e) { var n = t.match(p), r = n[1], o = n[3]; return o ? a(o, e[r]) : e[r] } function s(t) { var e = t.match(d); return e && e.length >= 3 ? { key: e[2], parent: a(e[1], window) } : { key: t, parent: window } } var c = t("ee").get("jsonp"), f = t("wrap-function")(c); if (e.exports = c, o()) { var u = /[?&](?:callback|cb)=([^&#]+)/, d = /(.*).([^.]+)/, p = /^(w+)(.|$)(.*)$/, l = ["appendChild", "insertBefore", "replaceChild"]; Node && Node.prototype && Node.prototype.appendChild ? f.inPlace(Node.prototype, l, "dom-") : (f.inPlace(HTMLElement.prototype, l, "dom-"), f.inPlace(HTMLHeadElement.prototype, l, "dom-"), f.inPlace(HTMLBodyElement.prototype, l, "dom-")), c.on("dom-start", function (t) { r(t[0]) }) } }, {}], 10: [function (t, e, n) { var r = t("ee").get("mutation"), o = t("wrap-function")(r), i = NREUM.o.MO; e.exports = r, i && (window.MutationObserver = function (t) { return this instanceof i ? new i(o(t, "fn-")) : i.apply(this, arguments) }, MutationObserver.prototype = i.prototype) }, {}], 11: [function (t, e, n) { function r(t) { var e = a.context(), n = s(t, "executor-", e), r = new f(n); return a.context(r).getCtx = function () { return e }, a.emit("new-promise", [r, e], e), r } function o(t, e) { return e } var i = t("wrap-function"), a = t("ee").get("promise"), s = i(a), c = t(25), f = NREUM.o.PR; e.exports = a, f && (window.Promise = r, ["all", "race"].forEach(function (t) { var e = f[t]; f[t] = function (n) { function r(t) { return function () { a.emit("propagate", [null, !o], i), o = o || !t } } var o = !1; c(n, function (e, n) { Promise.resolve(n).then(r("all" === t), r(!1)) }); var i = e.apply(f, arguments), s = f.resolve(i); return s } }), ["resolve", "reject"].forEach(function (t) { var e = f[t]; f[t] = function (t) { var n = e.apply(f, arguments); return t !== n && a.emit("propagate", [t, !0], n), n } }), f.prototype["catch"] = function (t) { return this.then(null, t) }, f.prototype = Object.create(f.prototype, { constructor: { value: r } }), c(Object.getOwnPropertyNames(f), function (t, e) { try { r[e] = f[e] } catch (n) { } }), a.on("executor-start", function (t) { t[0] = s(t[0], "resolve-", this), t[1] = s(t[1], "resolve-", this) }), a.on("executor-err", function (t, e, n) { t[1](n) }), s.inPlace(f.prototype, ["then"], "then-", o), a.on("then-start", function (t, e) { this.promise = e, t[0] = s(t[0], "cb-", this), t[1] = s(t[1], "cb-", this) }), a.on("then-end", function (t, e, n) { this.nextPromise = n; var r = this.promise; a.emit("propagate", [r, !0], n) }), a.on("cb-end", function (t, e, n) { a.emit("propagate", [n, !0], this.nextPromise) }), a.on("propagate", function (t, e, n) { this.getCtx && !e || (this.getCtx = function () { if (t instanceof Promise) var e = a.context(t); return e && e.getCtx ? e.getCtx() : this }) }), r.toString = function () { return "" + f }) }, {}], 12: [function (t, e, n) { var r = t("ee").get("raf"), o = t("wrap-function")(r), i = "equestAnimationFrame"; e.exports = r, o.inPlace(window, ["r" + i, "mozR" + i, "webkitR" + i, "msR" + i], "raf-"), r.on("raf-start", function (t) { t[0] = o(t[0], "fn-") }) }, {}], 13: [function (t, e, n) { function r(t, e, n) { t[0] = a(t[0], "fn-", null, n) } function o(t, e, n) { this.method = n, this.timerDuration = isNaN(t[1]) ? 0 : +t[1], t[0] = a(t[0], "fn-", this, n) } var i = t("ee").get("timer"), a = t("wrap-function")(i), s = "setTimeout", c = "setInterval", f = "clearTimeout", u = "-start", d = "-"; e.exports = i, a.inPlace(window, [s, "setImmediate"], s + d), a.inPlace(window, [c], c + d), a.inPlace(window, [f, "clearImmediate"], f + d), i.on(c + u, r), i.on(s + u, o) }, {}], 14: [function (t, e, n) { function r(t, e) { d.inPlace(e, ["onreadystatechange"], "fn-", s) } function o() { var t = this, e = u.context(t); t.readyState > 3 && !e.resolved && (e.resolved = !0, u.emit("xhr-resolved", [], t)), d.inPlace(t, g, "fn-", s) } function i(t) { y.push(t), h && (b ? b.then(a) : v ? v(a) : (E = -E, O.data = E)) } function a() { for (var t = 0; t < y.length; t++)r([], y[t]); y.length && (y = []) } function s(t, e) { return e } function c(t, e) { for (var n in t) e[n] = t[n]; return e } t(6); var f = t("ee"), u = f.get("xhr"), d = t("wrap-function")(u), p = NREUM.o, l = p.XHR, h = p.MO, m = p.PR, v = p.SI, w = "readystatechange", g = ["onload", "onerror", "onabort", "onloadstart", "onloadend", "onprogress", "ontimeout"], y = []; e.exports = u; var x = window.XMLHttpRequest = function (t) { var e = new l(t); try { u.emit("new-xhr", [e], e), e.addEventListener(w, o, !1) } catch (n) { try { u.emit("internal-error", [n]) } catch (r) { } } return e }; if (c(l, x), x.prototype = l.prototype, d.inPlace(x.prototype, ["open", "send"], "-xhr-", s), u.on("send-xhr-start", function (t, e) { r(t, e), i(e) }), u.on("open-xhr-start", r), h) { var b = m && m.resolve(); if (!v && !m) { var E = 1, O = document.createTextNode(E); new h(a).observe(O, { characterData: !0 }) } } else f.on("fn-end", function (t) { t[0] && t[0].type === w || a() }) }, {}], 15: [function (t, e, n) { function r(t) { if (!i(t)) return null; var e = window.NREUM; if (!e.loader_config) return null; var n = (e.loader_config.accountID || "").toString() || null, r = (e.loader_config.agentID || "").toString() || null, s = (e.loader_config.trustKey || "").toString() || null; if (!n || !r) return null; var c = a.generateCatId(), f = a.generateCatId(), u = Date.now(), d = o(c, f, u, n, r, s); return { header: d, guid: c, traceId: f, timestamp: u } } function o(t, e, n, r, o, i) { var a = "btoa" in window && "function" == typeof window.btoa; if (!a) return null; var s = { v: [0, 1], d: { ty: "Browser", ac: r, ap: o, id: t, tr: e, ti: n } }; return i && r !== i && (s.d.tk = i), btoa(JSON.stringify(s)) } function i(t) { var e = !1, n = !1, r = {}; if ("init" in NREUM && "distributed_tracing" in NREUM.init && (r = NREUM.init.distributed_tracing, n = !!r.enabled), n) if (t.sameOrigin) e = !0; else if (r.allowed_origins instanceof Array) for (var o = 0; o < r.allowed_origins.length; o++) { var i = s(r.allowed_origins[o]); if (t.hostname === i.hostname && t.protocol === i.protocol && t.port === i.port) { e = !0; break } } return n && e } var a = t(23), s = t(17); e.exports = { generateTracePayload: r, shouldGenerateTrace: i } }, {}], 16: [function (t, e, n) { function r(t) { var e = this.params, n = this.metrics; if (!this.ended) { this.ended = !0; for (var r = 0; r < p; r++)t.removeEventListener(d[r], this.listener, !1); e.aborted || (n.duration = a.now() - this.startTime, this.loadCaptureCalled || 4 !== t.readyState ? null == e.status && (e.status = 0) : i(this, t), n.cbTime = this.cbTime, u.emit("xhr-done", [t], t), s("xhr", [e, n, this.startTime])) } } function o(t, e) { var n = c(e), r = t.params; r.host = n.hostname + ":" + n.port, r.pathname = n.pathname, t.parsedOrigin = c(e), t.sameOrigin = t.parsedOrigin.sameOrigin } function i(t, e) { t.params.status = e.status; var n = v(e, t.lastSize); if (n && (t.metrics.rxSize = n), t.sameOrigin) { var r = e.getResponseHeader("X-NewRelic-App-Data"); r && (t.params.cat = r.split(", ").pop()) } t.loadCaptureCalled = !0 } var a = t("loader"); if (a.xhrWrappable) { var s = t("handle"), c = t(17), f = t(15).generateTracePayload, u = t("ee"), d = ["load", "error", "abort", "timeout"], p = d.length, l = t("id"), h = t(21), m = t(20), v = t(18), w = window.XMLHttpRequest; a.features.xhr = !0, t(14), t(7), u.on("new-xhr", function (t) { var e = this; e.totalCbs = 0, e.called = 0, e.cbTime = 0, e.end = r, e.ended = !1, e.xhrGuids = {}, e.lastSize = null, e.loadCaptureCalled = !1, t.addEventListener("load", function (n) { i(e, t) }, !1), h && (h > 34 || h < 10) || window.opera || t.addEventListener("progress", function (t) { e.lastSize = t.loaded }, !1) }), u.on("open-xhr-start", function (t) { this.params = { method: t[0] }, o(this, t[1]), this.metrics = {} }), u.on("open-xhr-end", function (t, e) { "loader_config" in NREUM && "xpid" in NREUM.loader_config && this.sameOrigin && e.setRequestHeader("X-NewRelic-ID", NREUM.loader_config.xpid); var n = f(this.parsedOrigin); n && n.header && (e.setRequestHeader("newrelic", n.header), this.dt = n) }), u.on("send-xhr-start", function (t, e) { var n = this.metrics, r = t[0], o = this; if (n && r) { var i = m(r); i && (n.txSize = i) } this.startTime = a.now(), this.listener = function (t) { try { "abort" !== t.type || o.loadCaptureCalled || (o.params.aborted = !0), ("load" !== t.type || o.called === o.totalCbs && (o.onloadCalled || "function" != typeof e.onload)) && o.end(e) } catch (n) { try { u.emit("internal-error", [n]) } catch (r) { } } }; for (var s = 0; s < p; s++)e.addEventListener(d[s], this.listener, !1) }), u.on("xhr-cb-time", function (t, e, n) { this.cbTime += t, e ? this.onloadCalled = !0 : this.called += 1, this.called !== this.totalCbs || !this.onloadCalled && "function" == typeof n.onload || this.end(n) }), u.on("xhr-load-added", function (t, e) { var n = "" + l(t) + !!e; this.xhrGuids && !this.xhrGuids[n] && (this.xhrGuids[n] = !0, this.totalCbs += 1) }), u.on("xhr-load-removed", function (t, e) { var n = "" + l(t) + !!e; this.xhrGuids && this.xhrGuids[n] && (delete this.xhrGuids[n], this.totalCbs -= 1) }), u.on("addEventListener-end", function (t, e) { e instanceof w && "load" === t[0] && u.emit("xhr-load-added", [t[1], t[2]], e) }), u.on("removeEventListener-end", function (t, e) { e instanceof w && "load" === t[0] && u.emit("xhr-load-removed", [t[1], t[2]], e) }), u.on("fn-start", function (t, e, n) { e instanceof w && ("onload" === n && (this.onload = !0), ("load" === (t[0] && t[0].type) || this.onload) && (this.xhrCbStart = a.now())) }), u.on("fn-end", function (t, e) { this.xhrCbStart && u.emit("xhr-cb-time", [a.now() - this.xhrCbStart, this.onload, e], e) }), u.on("fetch-before-start", function (t) { var e, n = t[1] || {}; "string" == typeof t[0] ? e = t[0] : t[0] && t[0].url && (e = t[0].url), e && (this.parsedOrigin = c(e), this.sameOrigin = this.parsedOrigin.sameOrigin); var r = f(this.parsedOrigin); if (r && r.header) { var o = r.header; if ("string" == typeof t[0]) { var i = {}; for (var a in n) i[a] = n[a]; i.headers = new Headers(n.headers || {}), i.headers.set("newrelic", o), this.dt = r, t.length > 1 ? t[1] = i : t.push(i) } else t[0] && t[0].headers && (t[0].headers.append("newrelic", o), this.dt = r) } }) } }, {}], 17: [function (t, e, n) { var r = {}; e.exports = function (t) { if (t in r) return r[t]; var e = document.createElement("a"), n = window.location, o = {}; e.href = t, o.port = e.port; var i = e.href.split("://"); !o.port && i[1] && (o.port = i[1].split("/")[0].split("@@").pop().split(":")[1]), o.port && "0" !== o.port || (o.port = "https" === i[0] ? "443" : "80"), o.hostname = e.hostname || n.hostname, o.pathname = e.pathname, o.protocol = i[0], "/" !== o.pathname.charAt(0) && (o.pathname = "/" + o.pathname); var a = !e.protocol || ":" === e.protocol || e.protocol === n.protocol, s = e.hostname === document.domain && e.port === n.port; return o.sameOrigin = a && (!e.hostname || s), "/" === o.pathname && (r[t] = o), o } }, {}], 18: [function (t, e, n) { function r(t, e) { var n = t.responseType; return "json" === n && null !== e ? e : "arraybuffer" === n || "blob" === n || "json" === n ? o(t.response) : "text" === n || "document" === n || "" === n || void 0 === n ? o(t.responseText) : void 0 } var o = t(20); e.exports = r }, {}], 19: [function (t, e, n) { function r() { } function o(t, e, n) { return function () { return i(t, [f.now()].concat(s(arguments)), e ? null : this, n), e ? void 0 : this } } var i = t("handle"), a = t(25), s = t(26), c = t("ee").get("tracer"), f = t("loader"), u = NREUM; "undefined" == typeof window.newrelic && (newrelic = u); var d = ["setPageViewName", "setCustomAttribute", "setErrorHandler", "finished", "addToTrace", "inlineHit", "addRelease"], p = "api-", l = p + "ixn-"; a(d, function (t, e) { u[e] = o(p + e, !0, "api") }), u.addPageAction = o(p + "addPageAction", !0), u.setCurrentRouteName = o(p + "routeName", !0), e.exports = newrelic, u.interaction = function () { return (new r).get() }; var h = r.prototype = { createTracer: function (t, e) { var n = {}, r = this, o = "function" == typeof e; return i(l + "tracer", [f.now(), t, n], r), function () { if (c.emit((o ? "" : "no-") + "fn-start", [f.now(), r, o], n), o) try { return e.apply(this, arguments) } catch (t) { throw c.emit("fn-err", [arguments, this, t], n), t } finally { c.emit("fn-end", [f.now()], n) } } } }; a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","), function (t, e) { h[e] = o(l + e) }), newrelic.noticeError = function (t, e) { "string" == typeof t && (t = new Error(t)), i("err", [t, f.now(), !1, e]) } }, {}], 20: [function (t, e, n) { e.exports = function (t) { if ("string" == typeof t && t.length) return t.length; if ("object" == typeof t) { if ("undefined" != typeof ArrayBuffer && t instanceof ArrayBuffer && t.byteLength) return t.byteLength; if ("undefined" != typeof Blob && t instanceof Blob && t.size) return t.size; if (!("undefined" != typeof FormData && t instanceof FormData)) try { return JSON.stringify(t).length } catch (e) { return } } } }, {}], 21: [function (t, e, n) { var r = 0, o = navigator.userAgent.match(/Firefox[/s](d+.d+)/); o && (r = +o[1]), e.exports = r }, {}], 22: [function (t, e, n) { function r(t, e) { var n = t.getEntries(); n.forEach(function (t) { "first-paint" === t.name ? c("timing", ["fp", Math.floor(t.startTime)]) : "first-contentful-paint" === t.name && c("timing", ["fcp", Math.floor(t.startTime)]) }) } function o(t, e) { var n = t.getEntries(); n.length > 0 && c("lcp", [n[n.length - 1]]) } function i(t) { if (t instanceof u && !p) { var e, n = Math.round(t.timeStamp); e = n > 1e12 ? Date.now() - n : f.now() - n, p = !0, c("timing", ["fi", n, { type: t.type, fid: e }]) } } if (!("init" in NREUM && "page_view_timing" in NREUM.init && "enabled" in NREUM.init.page_view_timing && NREUM.init.page_view_timing.enabled === !1)) { var a, s, c = t("handle"), f = t("loader"), u = NREUM.o.EV; if ("PerformanceObserver" in window && "function" == typeof window.PerformanceObserver) { a = new PerformanceObserver(r), s = new PerformanceObserver(o); try { a.observe({ entryTypes: ["paint"] }), s.observe({ entryTypes: ["largest-contentful-paint"] }) } catch (d) { } } if ("addEventListener" in document) { var p = !1, l = ["click", "keydown", "mousedown", "pointerdown", "touchstart"]; l.forEach(function (t) { document.addEventListener(t, i, !1) }) } } }, {}], 23: [function (t, e, n) { function r() { function t() { return e ? 15 & e[n++] : 16 * Math.random() | 0 } var e = null, n = 0, r = window.crypto || window.msCrypto; r && r.getRandomValues && (e = r.getRandomValues(new Uint8Array(31))); for (var o, i = "xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx", a = "", s = 0; s < i.length; s++)o = i[s], "x" === o ? a += t().toString(16) : "y" === o ? (o = 3 & t() | 8, a += o.toString(16)) : a += o; return a } function o() { function t() { return e ? 15 & e[n++] : 16 * Math.random() | 0 } var e = null, n = 0, r = window.crypto || window.msCrypto; r && r.getRandomValues && Uint8Array && (e = r.getRandomValues(new Uint8Array(31))); for (var o = [], i = 0; i < 16; i++)o.push(t().toString(16)); return o.join("") } e.exports = { generateUuid: r, generateCatId: o } }, {}], 24: [function (t, e, n) { function r(t, e) { if (!o) return !1; if (t !== o) return !1; if (!e) return !0; if (!i) return !1; for (var n = i.split("."), r = e.split("."), a = 0; a < r.length; a++)if (r[a] !== n[a]) return !1; return !0 } var o = null, i = null, a = /Version\/(\S+)\s+Safari/; if (navigator.userAgent) { var s = navigator.userAgent, c = s.match(a); c && s.indexOf("Chrome") === -1 && s.indexOf("Chromium") === -1 && (o = "Safari", i = c[1]) } e.exports = { agent: o, version: i, match: r } }, {}], 25: [function (t, e, n) { function r(t, e) { var n = [], r = "", i = 0; for (r in t) o.call(t, r) && (n[i] = e(r, t[r]), i += 1); return n } var o = Object.prototype.hasOwnProperty; e.exports = r }, {}], 26: [function (t, e, n) { function r(t, e, n) { e || (e = 0), "undefined" == typeof n && (n = t ? t.length : 0); for (var r = -1, o = n - e || 0, i = Array(o < 0 ? 0 : o); ++r < o;)i[r] = t[e + r]; return i } e.exports = r }, {}], 27: [function (t, e, n) { e.exports = { exists: "undefined" != typeof window.performance && window.performance.timing && "undefined" != typeof window.performance.timing.navigationStart } }, {}], ee: [function (t, e, n) { function r() { } function o(t) { function e(t) { return t && t instanceof r ? t : t ? c(t, s, i) : i() } function n(n, r, o, i) { if (!p.aborted || i) { t && t(n, r, o); for (var a = e(o), s = m(n), c = s.length, f = 0; f < c; f++)s[f].apply(a, r); var d = u[y[n]]; return d && d.push([x, n, r, a]), a } } function l(t, e) { g[t] = m(t).concat(e) } function h(t, e) { var n = g[t]; if (n) for (var r = 0; r < n.length; r++)n[r] === e && n.splice(r, 1) } function m(t) { return g[t] || [] } function v(t) { return d[t] = d[t] || o(n) } function w(t, e) { f(t, function (t, n) { e = e || "feature", y[n] = e, e in u || (u[e] = []) }) } var g = {}, y = {}, x = { on: l, addEventListener: l, removeEventListener: h, emit: n, get: v, listeners: m, context: e, buffer: w, abort: a, aborted: !1 }; return x } function i() { return new r } function a() { (u.api || u.feature) && (p.aborted = !0, u = p.backlog = {}) } var s = "nr@context", c = t("gos"), f = t(25), u = {}, d = {}, p = e.exports = o(); p.backlog = u }, {}], gos: [function (t, e, n) { function r(t, e, n) { if (o.call(t, e)) return t[e]; var r = n(); if (Object.defineProperty && Object.keys) try { return Object.defineProperty(t, e, { value: r, writable: !0, enumerable: !1 }), r } catch (i) { } return t[e] = r, r } var o = Object.prototype.hasOwnProperty; e.exports = r }, {}], handle: [function (t, e, n) { function r(t, e, n, r) { o.buffer([t], r), o.emit(t, e, n) } var o = t("ee").get("handle"); e.exports = r, r.ee = o }, {}], id: [function (t, e, n) { function r(t) { var e = typeof t; return !t || "object" !== e && "function" !== e ? -1 : t === window ? 0 : a(t, i, function () { return o++ }) } var o = 1, i = "nr@id", a = t("gos"); e.exports = r }, {}], loader: [function (t, e, n) { function r() { if (!E++) { var t = b.info = NREUM.info, e = l.getElementsByTagName("script")[0]; if (setTimeout(u.abort, 3e4), !(t && t.licenseKey && t.applicationID && e)) return u.abort(); f(y, function (e, n) { t[e] || (t[e] = n) }), c("mark", ["onload", a() + b.offset], null, "api"); var n = l.createElement("script"); n.src = "https://" + t.agent, e.parentNode.insertBefore(n, e) } } function o() { "complete" === l.readyState && i() } function i() { c("mark", ["domContent", a() + b.offset], null, "api") } function a() { return O.exists && performance.now ? Math.round(performance.now()) : (s = Math.max((new Date).getTime(), s)) - b.offset } var s = (new Date).getTime(), c = t("handle"), f = t(25), u = t("ee"), d = t(24), p = window, l = p.document, h = "addEventListener", m = "attachEvent", v = p.XMLHttpRequest, w = v && v.prototype; NREUM.o = { ST: setTimeout, SI: p.setImmediate, CT: clearTimeout, XHR: v, REQ: p.Request, EV: p.Event, PR: p.Promise, MO: p.MutationObserver }; var g = "" + location, y = { beacon: "bam.nr-data.net", errorBeacon: "bam.nr-data.net", agent: "js-agent.newrelic.com/nr-spa-1167.min.js" }, x = v && w && w[h] && !/CriOS/.test(navigator.userAgent), b = e.exports = { offset: s, now: a, origin: g, features: {}, xhrWrappable: x, userAgent: d }; t(19), t(22), l[h] ? (l[h]("DOMContentLoaded", i, !1), p[h]("load", r, !1)) : (l[m]("onreadystatechange", o), p[m]("onload", r)), c("mark", ["firstbyte", s], null, "api"); var E = 0, O = t(27) }, {}], "wrap-function": [function (t, e, n) { function r(t) { return !(t && t instanceof Function && t.apply && !t[a]) } var o = t("ee"), i = t(26), a = "nr@original", s = Object.prototype.hasOwnProperty, c = !1; e.exports = function (t, e) { function n(t, e, n, o) { function nrWrapper() { var r, a, s, c; try { a = this, r = i(arguments), s = "function" == typeof n ? n(r, a) : n || {} } catch (f) { p([f, "", [r, a, o], s]) } u(e + "start", [r, a, o], s); try { return c = t.apply(a, r) } catch (d) { throw u(e + "err", [r, a, d], s), d } finally { u(e + "end", [r, a, c], s) } } return r(t) ? t : (e || (e = ""), nrWrapper[a] = t, d(t, nrWrapper), nrWrapper) } function f(t, e, o, i) { o || (o = ""); var a, s, c, f = "-" === o.charAt(0); for (c = 0; c < e.length; c++)s = e[c], a = t[s], r(a) || (t[s] = n(a, f ? s + o : o, i, s)) } function u(n, r, o) { if (!c || e) { var i = c; c = !0; try { t.emit(n, r, o, e) } catch (a) { p([a, n, r, o]) } c = i } } function d(t, e) { if (Object.defineProperty && Object.keys) try { var n = Object.keys(t); return n.forEach(function (n) { Object.defineProperty(e, n, { get: function () { return t[n] }, set: function (e) { return t[n] = e, e } }) }), e } catch (r) { p([r]) } for (var o in t) s.call(t, o) && (e[o] = t[o]); return e } function p(e) { try { t.emit("internal-error", e) } catch (n) { } } return t || (t = o), n.inPlace = f, n.flag = a, n } }, {}] }, {}, ["loader", 2, 16, 5, 3, 4]);
+                                ; NREUM.loader_config = { accountID: "1160914", trustKey: "1160914", agentID: "13438175", licenseKey: "5000203576", applicationID: applicationId }
+                                    ; NREUM.info = { beacon: "bam.nr-data.net", errorBeacon: "bam.nr-data.net", licenseKey: "5000203576", applicationID: applicationId, sa: 1 }
+                            }
+                        }
+                         </script><script>
+          var FrontendExperiments={
+               improvedLoaderAnimationExperiment:{
+               id:"a18e96cb-4c4b-4af8-bbd0-2788477d9737",
+               queryParam:"isloadernew",
+               variant:"3",
+               disableLoaderBeforeResponse:true,
+               allowConduction:true,
+               rdlKey:"improvedLoaderAnimationExperiment",
+               callback:function(){
+                 if(document.getElementById("longLoaderNew") &&  document.body){
+                    document.getElementById("longLoaderNew").classList.remove("d-none");
+                     document.body.classList.add("disable-scroll")
+                     window.RDL.enableNewAnimationLoader=true;
+                 }else{
+                  var newloadTimer= setInterval(function(){
+                         if(document.getElementById("longLoaderNew") &&  document.body){
+                            clearInterval(newloadTimer);
+                            document.getElementById("longLoaderNew").classList.remove("d-none");
+                            document.body.classList.add("disable-scroll");
+                            window.RDL.enableNewAnimationLoader=true;
+                         }
+
+                    }, 100);
+                    experimentTraits = experimentTraits == null ? {} : experimentTraits;
+                    var expObj = {};
+                    expObj["LCES HIW Improved animation loader All Desktop V1 CVR"] = "Improved animation loader";
+                    if(window.RDL.visitorExperimentHelper && typeof window.RDL.visitorExperimentHelper.merge_options == "function"){
+                           experimentTraits =JSON.parse(JSON.stringify(window.RDL.visitorExperimentHelper.merge_options(experimentTraits,expObj)));
+                    }
+                 }
+                 
+                 
+            },
+             defaultCallback: function () {
+                
+                     if (window.RDL.improvedLoaderAnimationExperiment && 
+                        (window.RDL.improvedLoaderAnimationExperiment == 1 || window.RDL.improvedLoaderAnimationExperiment == 2)) {
+                        experimentTraits = experimentTraits == null ? {} : experimentTraits;
+                        var expObj = {};
+                        if (window.RDL.bundleLoaderContactExpEducTest == 1) {
+                            expObj["LCES HIW Improved animation loader All Desktop V1 CVR"] = "Baseline";
+                        } else {
+                            expObj["LCES HIW Improved animation loader All Desktop V1 CVR"] = "Variability Estimator";
+                        }
+                        if(window.RDL.visitorExperimentHelper && typeof window.RDL.visitorExperimentHelper.merge_options == "function"){
+                           experimentTraits =JSON.parse(JSON.stringify(window.RDL.visitorExperimentHelper.merge_options(experimentTraits,expObj)));
+                        }
+                    } 
+
+
+              }
+           }
+
+     };
+
+          if(window.RDL.visitorExperimentHelper && typeof window.RDL.visitorExperimentHelper.init == "function" && window.RDL.visitorExperimentHelper.GetQueryString("disableAjax") != "true")
+           window.RDL.visitorExperimentHelper.init(FrontendExperiments.improvedLoaderAnimationExperiment);</script><title>LiveCareer</title><link rel="shortcut icon" href="/favicon.ico"/><link rel="stylesheet" href="https://assets.livecareer.es/blobcontent/lcintl/styles/fontawesome-subset/css/fontawesome-all.min.css"/><link rel="manifest" href="undefined/manifest.json"/><script>var deviceType =  "desktop";
+                    if (/MSIE d|Trident.*rv:/.test(navigator.userAgent)) {
+                        if (!String.prototype.startsWith) {
+                        String.prototype.startsWith = function (searchString, position) {
+                        position = position || 0;
+                        return this.indexOf(searchString, position) === position;
+                        };
+                        }
+                        if (!String.prototype.endsWith) {
+                        String.prototype.endsWith = function (search, this_len) {
+                        if (this_len === undefined || this_len > this.length) {
+                        this_len = this.length;
+                        }
+                        return this.substring(this_len - search.length, this_len) === search;
+                        };
+                        }
+                        document.write(' <script src="https://assets.livecareer.es/blobcontent//intl/scripts/browser-polyfill.min.js" />');
+                        document.write(' <script src="https://cdn.jsdelivr.net/npm/es6-promise@4/dist/es6-promise.auto.min.js"/>');
+                    }</script><meta name="next-head-count" content="18"/><noscript data-n-css=""></noscript><script defer="" nomodule="" src="https://assets.livecareer.es/crear-cv/mobile/_next/static/chunks/polyfills-5cd94c89d3acac5f.js"></script><script src="https://assets.livecareer.es/crear-cv/scripts/rbrwz/app-1.0.0.18.js" defer="" data-nscript="beforeInteractive"></script><script src="https://assets.livecareer.es/crear-cv/mobile/_next/static/chunks/webpack-4f9d0debf99c0b3d.js" defer=""></script><script src="https://assets.livecareer.es/crear-cv/mobile/_next/static/chunks/framework-6e4ba497ae0c8a3f.js" defer=""></script><script src="https://assets.livecareer.es/crear-cv/mobile/_next/static/chunks/main-1fbc24c00fe9642a.js" defer=""></script><script src="https://assets.livecareer.es/crear-cv/mobile/_next/static/chunks/pages/_app-7857ddb502a3bd24.js" defer=""></script><script src="https://assets.livecareer.es/crear-cv/mobile/_next/static/chunks/pages/index-145624afe79050ea.js" defer=""></script><script src="https://assets.livecareer.es/crear-cv/mobile/_next/static/JBZMpNBS7hUbEwMMAyDOO/_buildManifest.js" defer=""></script><script src="https://assets.livecareer.es/crear-cv/mobile/_next/static/JBZMpNBS7hUbEwMMAyDOO/_ssgManifest.js" defer=""></script><script src="https://assets.livecareer.es/crear-cv/mobile/_next/static/JBZMpNBS7hUbEwMMAyDOO/_middlewareManifest.js" defer=""></script><style data-href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@700;900&family=Roboto:wght@300;400;500;700&family=Montserrat:wght@400;500;600;700&family=Source+Sans+Pro:wght@300;400;500;600;700&family=Fira+Sans:wght@300;400;500;700&family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400&family=Blinker:wght@400;700&family=PT+Sans:wght@400;700&display=swap">@font-face{font-family:'Blinker';font-style:normal;font-weight:400;font-display:swap;src:url(https://fonts.gstatic.com/s/blinker/v13/cIf9MaFatEE-VTaPxCo.woff) format('woff')}@font-face{font-family:'Blinker';font-style:normal;font-weight:700;font-display:swap;src:url(https://fonts.gstatic.com/s/blinker/v13/cIf4MaFatEE-VTaP_JWERGI.woff) format('woff')}@font-face{font-family:'Fira Sans';font-style:normal;font-weight:300;font-display:swap;src:url(https://fonts.gstatic.com/s/firasans/v17/va9B4kDNxMZdWfMOD5VnPKruQg.woff) format('woff')}@font-face{font-family:'Fira Sans';font-style:normal;font-weight:400;font-display:swap;src:url(https://fonts.gstatic.com/s/firasans/v17/va9E4kDNxMZdWfMOD5Vfkw.woff) format('woff')}@font-face{font-family:'Fira Sans';font-style:normal;font-weight:500;font-display:swap;src:url(https://fonts.gstatic.com/s/firasans/v17/va9B4kDNxMZdWfMOD5VnZKvuQg.woff) format('woff')}@font-face{font-family:'Fira Sans';font-style:normal;font-weight:700;font-display:swap;src:url(https://fonts.gstatic.com/s/firasans/v17/va9B4kDNxMZdWfMOD5VnLK3uQg.woff) format('woff')}@font-face{font-family:'Frank Ruhl Libre';font-style:normal;font-weight:700;font-display:swap;src:url(https://fonts.gstatic.com/s/frankruhllibre/v20/j8_96_fAw7jrcalD7oKYNX0QfAnPcbzNEEB7OoicBw4iZlqT.woff) format('woff')}@font-face{font-family:'Frank Ruhl Libre';font-style:normal;font-weight:900;font-display:swap;src:url(https://fonts.gstatic.com/s/frankruhllibre/v20/j8_96_fAw7jrcalD7oKYNX0QfAnPcbzNEEB7OoicBw5sZlqT.woff) format('woff')}@font-face{font-family:'Montserrat';font-style:normal;font-weight:400;font-display:swap;src:url(https://fonts.gstatic.com/s/montserrat/v26/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCtr6Ew9.woff) format('woff')}@font-face{font-family:'Montserrat';font-style:normal;font-weight:500;font-display:swap;src:url(https://fonts.gstatic.com/s/montserrat/v26/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCtZ6Ew9.woff) format('woff')}@font-face{font-family:'Montserrat';font-style:normal;font-weight:600;font-display:swap;src:url(https://fonts.gstatic.com/s/montserrat/v26/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCu170w9.woff) format('woff')}@font-face{font-family:'Montserrat';font-style:normal;font-weight:700;font-display:swap;src:url(https://fonts.gstatic.com/s/montserrat/v26/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCuM70w9.woff) format('woff')}@font-face{font-family:'Open Sans';font-style:italic;font-weight:400;font-stretch:normal;font-display:swap;src:url(https://fonts.gstatic.com/s/opensans/v36/memQYaGs126MiZpBA-UFUIcVXSCEkx2cmqvXlWq8tWZ0Pw86hd0Rk8ZkaVQ.woff) format('woff')}@font-face{font-family:'Open Sans';font-style:normal;font-weight:400;font-stretch:normal;font-display:swap;src:url(https://fonts.gstatic.com/s/opensans/v36/memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgsjZ0C4k.woff) format('woff')}@font-face{font-family:'Open Sans';font-style:normal;font-weight:600;font-stretch:normal;font-display:swap;src:url(https://fonts.gstatic.com/s/opensans/v36/memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgsgH1y4k.woff) format('woff')}@font-face{font-family:'Open Sans';font-style:normal;font-weight:700;font-stretch:normal;font-display:swap;src:url(https://fonts.gstatic.com/s/opensans/v36/memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgsg-1y4k.woff) format('woff')}@font-face{font-family:'PT Sans';font-style:normal;font-weight:400;font-display:swap;src:url(https://fonts.gstatic.com/s/ptsans/v17/jizaRExUiTo99u79P0Y.woff) format('woff')}@font-face{font-family:'PT Sans';font-style:normal;font-weight:700;font-display:swap;src:url(https://fonts.gstatic.com/s/ptsans/v17/jizfRExUiTo99u79B_mh4Oo.woff) format('woff')}@font-face{font-family:'Roboto';font-style:normal;font-weight:300;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmSU5vAA.woff) format('woff')}@font-face{font-family:'Roboto';font-style:normal;font-weight:400;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v30/KFOmCnqEu92Fr1Me5g.woff) format('woff')}@font-face{font-family:'Roboto';font-style:normal;font-weight:500;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmEU9vAA.woff) format('woff')}@font-face{font-family:'Roboto';font-style:normal;font-weight:700;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmWUlvAA.woff) format('woff')}@font-face{font-family:'Source Sans Pro';font-style:normal;font-weight:300;font-display:swap;src:url(https://fonts.gstatic.com/s/sourcesanspro/v22/6xKydSBYKcSV-LCoeQqfX1RYOo3ik4zAkw.woff) format('woff')}@font-face{font-family:'Source Sans Pro';font-style:normal;font-weight:400;font-display:swap;src:url(https://fonts.gstatic.com/s/sourcesanspro/v22/6xK3dSBYKcSV-LCoeQqfX1RYOo3aPA.woff) format('woff')}@font-face{font-family:'Source Sans Pro';font-style:normal;font-weight:600;font-display:swap;src:url(https://fonts.gstatic.com/s/sourcesanspro/v22/6xKydSBYKcSV-LCoeQqfX1RYOo3i54rAkw.woff) format('woff')}@font-face{font-family:'Source Sans Pro';font-style:normal;font-weight:700;font-display:swap;src:url(https://fonts.gstatic.com/s/sourcesanspro/v22/6xKydSBYKcSV-LCoeQqfX1RYOo3ig4vAkw.woff) format('woff')}@font-face{font-family:'Blinker';font-style:normal;font-weight:400;font-display:swap;src:url(https://fonts.gstatic.com/s/blinker/v13/cIf9MaFatEE-VTaP9CChYUsEkIpdQQ.woff2) format('woff2');unicode-range:U+0100-02AF,U+0304,U+0308,U+0329,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF}@font-face{font-family:'Blinker';font-style:normal;font-weight:400;font-display:swap;src:url(https://fonts.gstatic.com/s/blinker/v13/cIf9MaFatEE-VTaP9C6hYUsEkIo.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-family:'Blinker';font-style:normal;font-weight:700;font-display:swap;src:url(https://fonts.gstatic.com/s/blinker/v13/cIf4MaFatEE-VTaP_JWEdGgmnaBnSL_41Q.woff2) format('woff2');unicode-range:U+0100-02AF,U+0304,U+0308,U+0329,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF}@font-face{font-family:'Blinker';font-style:normal;font-weight:700;font-display:swap;src:url(https://fonts.gstatic.com/s/blinker/v13/cIf4MaFatEE-VTaP_JWEdGYmnaBnSL8.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-family:'Fira Sans';font-style:normal;font-weight:300;font-display:swap;src:url(https://fonts.gstatic.com/s/firasans/v17/va9B4kDNxMZdWfMOD5VnPKreSxf6Xl7Gl3LX.woff2) format('woff2');unicode-range:U+0460-052F,U+1C80-1C88,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F}@font-face{font-family:'Fira Sans';font-style:normal;font-weight:300;font-display:swap;src:url(https://fonts.gstatic.com/s/firasans/v17/va9B4kDNxMZdWfMOD5VnPKreQhf6Xl7Gl3LX.woff2) format('woff2');unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}@font-face{font-family:'Fira Sans';font-style:normal;font-weight:300;font-display:swap;src:url(https://fonts.gstatic.com/s/firasans/v17/va9B4kDNxMZdWfMOD5VnPKreShf6Xl7Gl3LX.woff2) format('woff2');unicode-range:U+1F00-1FFF}@font-face{font-family:'Fira Sans';font-style:normal;font-weight:300;font-display:swap;src:url(https://fonts.gstatic.com/s/firasans/v17/va9B4kDNxMZdWfMOD5VnPKreRRf6Xl7Gl3LX.woff2) format('woff2');unicode-range:U+0370-03FF}@font-face{font-family:'Fira Sans';font-style:normal;font-weight:300;font-display:swap;src:url(https://fonts.gstatic.com/s/firasans/v17/va9B4kDNxMZdWfMOD5VnPKreSRf6Xl7Gl3LX.woff2) format('woff2');unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+0300-0301,U+0303-0304,U+0308-0309,U+0323,U+0329,U+1EA0-1EF9,U+20AB}@font-face{font-family:'Fira Sans';font-style:normal;font-weight:300;font-display:swap;src:url(https://fonts.gstatic.com/s/firasans/v17/va9B4kDNxMZdWfMOD5VnPKreSBf6Xl7Gl3LX.woff2) format('woff2');unicode-range:U+0100-02AF,U+0304,U+0308,U+0329,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF}@font-face{font-family:'Fira Sans';font-style:normal;font-weight:300;font-display:swap;src:url(https://fonts.gstatic.com/s/firasans/v17/va9B4kDNxMZdWfMOD5VnPKreRhf6Xl7Glw.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-family:'Fira Sans';font-style:normal;font-weight:400;font-display:swap;src:url(https://fonts.gstatic.com/s/firasans/v17/va9E4kDNxMZdWfMOD5VvmojLazX3dGTP.woff2) format('woff2');unicode-range:U+0460-052F,U+1C80-1C88,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F}@font-face{font-family:'Fira Sans';font-style:normal;font-weight:400;font-display:swap;src:url(https://fonts.gstatic.com/s/firasans/v17/va9E4kDNxMZdWfMOD5Vvk4jLazX3dGTP.woff2) format('woff2');unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}@font-face{font-family:'Fira Sans';font-style:normal;font-weight:400;font-display:swap;src:url(https://fonts.gstatic.com/s/firasans/v17/va9E4kDNxMZdWfMOD5Vvm4jLazX3dGTP.woff2) format('woff2');unicode-range:U+1F00-1FFF}@font-face{font-family:'Fira Sans';font-style:normal;font-weight:400;font-display:swap;src:url(https://fonts.gstatic.com/s/firasans/v17/va9E4kDNxMZdWfMOD5VvlIjLazX3dGTP.woff2) format('woff2');unicode-range:U+0370-03FF}@font-face{font-family:'Fira Sans';font-style:normal;font-weight:400;font-display:swap;src:url(https://fonts.gstatic.com/s/firasans/v17/va9E4kDNxMZdWfMOD5VvmIjLazX3dGTP.woff2) format('woff2');unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+0300-0301,U+0303-0304,U+0308-0309,U+0323,U+0329,U+1EA0-1EF9,U+20AB}@font-face{font-family:'Fira Sans';font-style:normal;font-weight:400;font-display:swap;src:url(https://fonts.gstatic.com/s/firasans/v17/va9E4kDNxMZdWfMOD5VvmYjLazX3dGTP.woff2) format('woff2');unicode-range:U+0100-02AF,U+0304,U+0308,U+0329,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF}@font-face{font-family:'Fira Sans';font-style:normal;font-weight:400;font-display:swap;src:url(https://fonts.gstatic.com/s/firasans/v17/va9E4kDNxMZdWfMOD5Vvl4jLazX3dA.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-family:'Fira Sans';font-style:normal;font-weight:500;font-display:swap;src:url(https://fonts.gstatic.com/s/firasans/v17/va9B4kDNxMZdWfMOD5VnZKveSxf6Xl7Gl3LX.woff2) format('woff2');unicode-range:U+0460-052F,U+1C80-1C88,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F}@font-face{font-family:'Fira Sans';font-style:normal;font-weight:500;font-display:swap;src:url(https://fonts.gstatic.com/s/firasans/v17/va9B4kDNxMZdWfMOD5VnZKveQhf6Xl7Gl3LX.woff2) format('woff2');unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}@font-face{font-family:'Fira Sans';font-style:normal;font-weight:500;font-display:swap;src:url(https://fonts.gstatic.com/s/firasans/v17/va9B4kDNxMZdWfMOD5VnZKveShf6Xl7Gl3LX.woff2) format('woff2');unicode-range:U+1F00-1FFF}@font-face{font-family:'Fira Sans';font-style:normal;font-weight:500;font-display:swap;src:url(https://fonts.gstatic.com/s/firasans/v17/va9B4kDNxMZdWfMOD5VnZKveRRf6Xl7Gl3LX.woff2) format('woff2');unicode-range:U+0370-03FF}@font-face{font-family:'Fira Sans';font-style:normal;font-weight:500;font-display:swap;src:url(https://fonts.gstatic.com/s/firasans/v17/va9B4kDNxMZdWfMOD5VnZKveSRf6Xl7Gl3LX.woff2) format('woff2');unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+0300-0301,U+0303-0304,U+0308-0309,U+0323,U+0329,U+1EA0-1EF9,U+20AB}@font-face{font-family:'Fira Sans';font-style:normal;font-weight:500;font-display:swap;src:url(https://fonts.gstatic.com/s/firasans/v17/va9B4kDNxMZdWfMOD5VnZKveSBf6Xl7Gl3LX.woff2) format('woff2');unicode-range:U+0100-02AF,U+0304,U+0308,U+0329,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF}@font-face{font-family:'Fira Sans';font-style:normal;font-weight:500;font-display:swap;src:url(https://fonts.gstatic.com/s/firasans/v17/va9B4kDNxMZdWfMOD5VnZKveRhf6Xl7Glw.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-family:'Fira Sans';font-style:normal;font-weight:700;font-display:swap;src:url(https://fonts.gstatic.com/s/firasans/v17/va9B4kDNxMZdWfMOD5VnLK3eSxf6Xl7Gl3LX.woff2) format('woff2');unicode-range:U+0460-052F,U+1C80-1C88,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F}@font-face{font-family:'Fira Sans';font-style:normal;font-weight:700;font-display:swap;src:url(https://fonts.gstatic.com/s/firasans/v17/va9B4kDNxMZdWfMOD5VnLK3eQhf6Xl7Gl3LX.woff2) format('woff2');unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}@font-face{font-family:'Fira Sans';font-style:normal;font-weight:700;font-display:swap;src:url(https://fonts.gstatic.com/s/firasans/v17/va9B4kDNxMZdWfMOD5VnLK3eShf6Xl7Gl3LX.woff2) format('woff2');unicode-range:U+1F00-1FFF}@font-face{font-family:'Fira Sans';font-style:normal;font-weight:700;font-display:swap;src:url(https://fonts.gstatic.com/s/firasans/v17/va9B4kDNxMZdWfMOD5VnLK3eRRf6Xl7Gl3LX.woff2) format('woff2');unicode-range:U+0370-03FF}@font-face{font-family:'Fira Sans';font-style:normal;font-weight:700;font-display:swap;src:url(https://fonts.gstatic.com/s/firasans/v17/va9B4kDNxMZdWfMOD5VnLK3eSRf6Xl7Gl3LX.woff2) format('woff2');unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+0300-0301,U+0303-0304,U+0308-0309,U+0323,U+0329,U+1EA0-1EF9,U+20AB}@font-face{font-family:'Fira Sans';font-style:normal;font-weight:700;font-display:swap;src:url(https://fonts.gstatic.com/s/firasans/v17/va9B4kDNxMZdWfMOD5VnLK3eSBf6Xl7Gl3LX.woff2) format('woff2');unicode-range:U+0100-02AF,U+0304,U+0308,U+0329,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF}@font-face{font-family:'Fira Sans';font-style:normal;font-weight:700;font-display:swap;src:url(https://fonts.gstatic.com/s/firasans/v17/va9B4kDNxMZdWfMOD5VnLK3eRhf6Xl7Glw.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-family:'Frank Ruhl Libre';font-style:normal;font-weight:700;font-display:swap;src:url(https://fonts.gstatic.com/s/frankruhllibre/v20/j8_w6_fAw7jrcalD7oKYNX0QfAnPW7Ll4brkiY-xBg.woff2) format('woff2');unicode-range:U+0590-05FF,U+200C-2010,U+20AA,U+25CC,U+FB1D-FB4F}@font-face{font-family:'Frank Ruhl Libre';font-style:normal;font-weight:700;font-display:swap;src:url(https://fonts.gstatic.com/s/frankruhllibre/v20/j8_w6_fAw7jrcalD7oKYNX0QfAnPW77l4brkiY-xBg.woff2) format('woff2');unicode-range:U+0100-02AF,U+0304,U+0308,U+0329,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF}@font-face{font-family:'Frank Ruhl Libre';font-style:normal;font-weight:700;font-display:swap;src:url(https://fonts.gstatic.com/s/frankruhllibre/v20/j8_w6_fAw7jrcalD7oKYNX0QfAnPW7Dl4brkiY8.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-family:'Frank Ruhl Libre';font-style:normal;font-weight:900;font-display:swap;src:url(https://fonts.gstatic.com/s/frankruhllibre/v20/j8_w6_fAw7jrcalD7oKYNX0QfAnPW7Ll4brkiY-xBg.woff2) format('woff2');unicode-range:U+0590-05FF,U+200C-2010,U+20AA,U+25CC,U+FB1D-FB4F}@font-face{font-family:'Frank Ruhl Libre';font-style:normal;font-weight:900;font-display:swap;src:url(https://fonts.gstatic.com/s/frankruhllibre/v20/j8_w6_fAw7jrcalD7oKYNX0QfAnPW77l4brkiY-xBg.woff2) format('woff2');unicode-range:U+0100-02AF,U+0304,U+0308,U+0329,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF}@font-face{font-family:'Frank Ruhl Libre';font-style:normal;font-weight:900;font-display:swap;src:url(https://fonts.gstatic.com/s/frankruhllibre/v20/j8_w6_fAw7jrcalD7oKYNX0QfAnPW7Dl4brkiY8.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-family:'Montserrat';font-style:normal;font-weight:400;font-display:swap;src:url(https://fonts.gstatic.com/s/montserrat/v26/JTUSjIg1_i6t8kCHKm459WRhyyTh89ZNpQ.woff2) format('woff2');unicode-range:U+0460-052F,U+1C80-1C88,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F}@font-face{font-family:'Montserrat';font-style:normal;font-weight:400;font-display:swap;src:url(https://fonts.gstatic.com/s/montserrat/v26/JTUSjIg1_i6t8kCHKm459W1hyyTh89ZNpQ.woff2) format('woff2');unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}@font-face{font-family:'Montserrat';font-style:normal;font-weight:400;font-display:swap;src:url(https://fonts.gstatic.com/s/montserrat/v26/JTUSjIg1_i6t8kCHKm459WZhyyTh89ZNpQ.woff2) format('woff2');unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+0300-0301,U+0303-0304,U+0308-0309,U+0323,U+0329,U+1EA0-1EF9,U+20AB}@font-face{font-family:'Montserrat';font-style:normal;font-weight:400;font-display:swap;src:url(https://fonts.gstatic.com/s/montserrat/v26/JTUSjIg1_i6t8kCHKm459WdhyyTh89ZNpQ.woff2) format('woff2');unicode-range:U+0100-02AF,U+0304,U+0308,U+0329,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF}@font-face{font-family:'Montserrat';font-style:normal;font-weight:400;font-display:swap;src:url(https://fonts.gstatic.com/s/montserrat/v26/JTUSjIg1_i6t8kCHKm459WlhyyTh89Y.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-family:'Montserrat';font-style:normal;font-weight:500;font-display:swap;src:url(https://fonts.gstatic.com/s/montserrat/v26/JTUSjIg1_i6t8kCHKm459WRhyyTh89ZNpQ.woff2) format('woff2');unicode-range:U+0460-052F,U+1C80-1C88,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F}@font-face{font-family:'Montserrat';font-style:normal;font-weight:500;font-display:swap;src:url(https://fonts.gstatic.com/s/montserrat/v26/JTUSjIg1_i6t8kCHKm459W1hyyTh89ZNpQ.woff2) format('woff2');unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}@font-face{font-family:'Montserrat';font-style:normal;font-weight:500;font-display:swap;src:url(https://fonts.gstatic.com/s/montserrat/v26/JTUSjIg1_i6t8kCHKm459WZhyyTh89ZNpQ.woff2) format('woff2');unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+0300-0301,U+0303-0304,U+0308-0309,U+0323,U+0329,U+1EA0-1EF9,U+20AB}@font-face{font-family:'Montserrat';font-style:normal;font-weight:500;font-display:swap;src:url(https://fonts.gstatic.com/s/montserrat/v26/JTUSjIg1_i6t8kCHKm459WdhyyTh89ZNpQ.woff2) format('woff2');unicode-range:U+0100-02AF,U+0304,U+0308,U+0329,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF}@font-face{font-family:'Montserrat';font-style:normal;font-weight:500;font-display:swap;src:url(https://fonts.gstatic.com/s/montserrat/v26/JTUSjIg1_i6t8kCHKm459WlhyyTh89Y.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-family:'Montserrat';font-style:normal;font-weight:600;font-display:swap;src:url(https://fonts.gstatic.com/s/montserrat/v26/JTUSjIg1_i6t8kCHKm459WRhyyTh89ZNpQ.woff2) format('woff2');unicode-range:U+0460-052F,U+1C80-1C88,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F}@font-face{font-family:'Montserrat';font-style:normal;font-weight:600;font-display:swap;src:url(https://fonts.gstatic.com/s/montserrat/v26/JTUSjIg1_i6t8kCHKm459W1hyyTh89ZNpQ.woff2) format('woff2');unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}@font-face{font-family:'Montserrat';font-style:normal;font-weight:600;font-display:swap;src:url(https://fonts.gstatic.com/s/montserrat/v26/JTUSjIg1_i6t8kCHKm459WZhyyTh89ZNpQ.woff2) format('woff2');unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+0300-0301,U+0303-0304,U+0308-0309,U+0323,U+0329,U+1EA0-1EF9,U+20AB}@font-face{font-family:'Montserrat';font-style:normal;font-weight:600;font-display:swap;src:url(https://fonts.gstatic.com/s/montserrat/v26/JTUSjIg1_i6t8kCHKm459WdhyyTh89ZNpQ.woff2) format('woff2');unicode-range:U+0100-02AF,U+0304,U+0308,U+0329,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF}@font-face{font-family:'Montserrat';font-style:normal;font-weight:600;font-display:swap;src:url(https://fonts.gstatic.com/s/montserrat/v26/JTUSjIg1_i6t8kCHKm459WlhyyTh89Y.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-family:'Montserrat';font-style:normal;font-weight:700;font-display:swap;src:url(https://fonts.gstatic.com/s/montserrat/v26/JTUSjIg1_i6t8kCHKm459WRhyyTh89ZNpQ.woff2) format('woff2');unicode-range:U+0460-052F,U+1C80-1C88,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F}@font-face{font-family:'Montserrat';font-style:normal;font-weight:700;font-display:swap;src:url(https://fonts.gstatic.com/s/montserrat/v26/JTUSjIg1_i6t8kCHKm459W1hyyTh89ZNpQ.woff2) format('woff2');unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}@font-face{font-family:'Montserrat';font-style:normal;font-weight:700;font-display:swap;src:url(https://fonts.gstatic.com/s/montserrat/v26/JTUSjIg1_i6t8kCHKm459WZhyyTh89ZNpQ.woff2) format('woff2');unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+0300-0301,U+0303-0304,U+0308-0309,U+0323,U+0329,U+1EA0-1EF9,U+20AB}@font-face{font-family:'Montserrat';font-style:normal;font-weight:700;font-display:swap;src:url(https://fonts.gstatic.com/s/montserrat/v26/JTUSjIg1_i6t8kCHKm459WdhyyTh89ZNpQ.woff2) format('woff2');unicode-range:U+0100-02AF,U+0304,U+0308,U+0329,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF}@font-face{font-family:'Montserrat';font-style:normal;font-weight:700;font-display:swap;src:url(https://fonts.gstatic.com/s/montserrat/v26/JTUSjIg1_i6t8kCHKm459WlhyyTh89Y.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-family:'Open Sans';font-style:italic;font-weight:400;font-stretch:100%;font-display:swap;src:url(https://fonts.gstatic.com/s/opensans/v36/memQYaGs126MiZpBA-UFUIcVXSCEkx2cmqvXlWq8tWZ0Pw86hd0Rk8ZkWV0exoMUdjFXmSU_.woff) format('woff');unicode-range:U+0460-052F,U+1C80-1C88,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F}@font-face{font-family:'Open Sans';font-style:italic;font-weight:400;font-stretch:100%;font-display:swap;src:url(https://fonts.gstatic.com/s/opensans/v36/memQYaGs126MiZpBA-UFUIcVXSCEkx2cmqvXlWq8tWZ0Pw86hd0Rk8ZkWVQexoMUdjFXmSU_.woff) format('woff');unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}@font-face{font-family:'Open Sans';font-style:italic;font-weight:400;font-stretch:100%;font-display:swap;src:url(https://fonts.gstatic.com/s/opensans/v36/memQYaGs126MiZpBA-UFUIcVXSCEkx2cmqvXlWq8tWZ0Pw86hd0Rk8ZkWVwexoMUdjFXmSU_.woff) format('woff');unicode-range:U+1F00-1FFF}@font-face{font-family:'Open Sans';font-style:italic;font-weight:400;font-stretch:100%;font-display:swap;src:url(https://fonts.gstatic.com/s/opensans/v36/memQYaGs126MiZpBA-UFUIcVXSCEkx2cmqvXlWq8tWZ0Pw86hd0Rk8ZkWVMexoMUdjFXmSU_.woff) format('woff');unicode-range:U+0370-03FF}@font-face{font-family:'Open Sans';font-style:italic;font-weight:400;font-stretch:100%;font-display:swap;src:url(https://fonts.gstatic.com/s/opensans/v36/memQYaGs126MiZpBA-UFUIcVXSCEkx2cmqvXlWq8tWZ0Pw86hd0Rk8ZkWVIexoMUdjFXmSU_.woff) format('woff');unicode-range:U+0590-05FF,U+200C-2010,U+20AA,U+25CC,U+FB1D-FB4F}@font-face{font-family:'Open Sans';font-style:italic;font-weight:400;font-stretch:100%;font-display:swap;src:url(https://fonts.gstatic.com/s/opensans/v36/memQYaGs126MiZpBA-UFUIcVXSCEkx2cmqvXlWq8tWZ0Pw86hd0Rk8ZkWV8exoMUdjFXmSU_.woff) format('woff');unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+0300-0301,U+0303-0304,U+0308-0309,U+0323,U+0329,U+1EA0-1EF9,U+20AB}@font-face{font-family:'Open Sans';font-style:italic;font-weight:400;font-stretch:100%;font-display:swap;src:url(https://fonts.gstatic.com/s/opensans/v36/memQYaGs126MiZpBA-UFUIcVXSCEkx2cmqvXlWq8tWZ0Pw86hd0Rk8ZkWV4exoMUdjFXmSU_.woff) format('woff');unicode-range:U+0100-02AF,U+0304,U+0308,U+0329,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF}@font-face{font-family:'Open Sans';font-style:italic;font-weight:400;font-stretch:100%;font-display:swap;src:url(https://fonts.gstatic.com/s/opensans/v36/memQYaGs126MiZpBA-UFUIcVXSCEkx2cmqvXlWq8tWZ0Pw86hd0Rk8ZkWVAexoMUdjFXmQ.woff) format('woff');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-family:'Open Sans';font-style:normal;font-weight:400;font-stretch:100%;font-display:swap;src:url(https://fonts.gstatic.com/s/opensans/v36/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTSKmu0SC55K5gw.woff2) format('woff2');unicode-range:U+0460-052F,U+1C80-1C88,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F}@font-face{font-family:'Open Sans';font-style:normal;font-weight:400;font-stretch:100%;font-display:swap;src:url(https://fonts.gstatic.com/s/opensans/v36/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTSumu0SC55K5gw.woff2) format('woff2');unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}@font-face{font-family:'Open Sans';font-style:normal;font-weight:400;font-stretch:100%;font-display:swap;src:url(https://fonts.gstatic.com/s/opensans/v36/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTSOmu0SC55K5gw.woff2) format('woff2');unicode-range:U+1F00-1FFF}@font-face{font-family:'Open Sans';font-style:normal;font-weight:400;font-stretch:100%;font-display:swap;src:url(https://fonts.gstatic.com/s/opensans/v36/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTSymu0SC55K5gw.woff2) format('woff2');unicode-range:U+0370-03FF}@font-face{font-family:'Open Sans';font-style:normal;font-weight:400;font-stretch:100%;font-display:swap;src:url(https://fonts.gstatic.com/s/opensans/v36/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTS2mu0SC55K5gw.woff2) format('woff2');unicode-range:U+0590-05FF,U+200C-2010,U+20AA,U+25CC,U+FB1D-FB4F}@font-face{font-family:'Open Sans';font-style:normal;font-weight:400;font-stretch:100%;font-display:swap;src:url(https://fonts.gstatic.com/s/opensans/v36/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTSCmu0SC55K5gw.woff2) format('woff2');unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+0300-0301,U+0303-0304,U+0308-0309,U+0323,U+0329,U+1EA0-1EF9,U+20AB}@font-face{font-family:'Open Sans';font-style:normal;font-weight:400;font-stretch:100%;font-display:swap;src:url(https://fonts.gstatic.com/s/opensans/v36/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTSGmu0SC55K5gw.woff2) format('woff2');unicode-range:U+0100-02AF,U+0304,U+0308,U+0329,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF}@font-face{font-family:'Open Sans';font-style:normal;font-weight:400;font-stretch:100%;font-display:swap;src:url(https://fonts.gstatic.com/s/opensans/v36/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTS-mu0SC55I.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-family:'Open Sans';font-style:normal;font-weight:600;font-stretch:100%;font-display:swap;src:url(https://fonts.gstatic.com/s/opensans/v36/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTSKmu0SC55K5gw.woff2) format('woff2');unicode-range:U+0460-052F,U+1C80-1C88,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F}@font-face{font-family:'Open Sans';font-style:normal;font-weight:600;font-stretch:100%;font-display:swap;src:url(https://fonts.gstatic.com/s/opensans/v36/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTSumu0SC55K5gw.woff2) format('woff2');unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}@font-face{font-family:'Open Sans';font-style:normal;font-weight:600;font-stretch:100%;font-display:swap;src:url(https://fonts.gstatic.com/s/opensans/v36/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTSOmu0SC55K5gw.woff2) format('woff2');unicode-range:U+1F00-1FFF}@font-face{font-family:'Open Sans';font-style:normal;font-weight:600;font-stretch:100%;font-display:swap;src:url(https://fonts.gstatic.com/s/opensans/v36/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTSymu0SC55K5gw.woff2) format('woff2');unicode-range:U+0370-03FF}@font-face{font-family:'Open Sans';font-style:normal;font-weight:600;font-stretch:100%;font-display:swap;src:url(https://fonts.gstatic.com/s/opensans/v36/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTS2mu0SC55K5gw.woff2) format('woff2');unicode-range:U+0590-05FF,U+200C-2010,U+20AA,U+25CC,U+FB1D-FB4F}@font-face{font-family:'Open Sans';font-style:normal;font-weight:600;font-stretch:100%;font-display:swap;src:url(https://fonts.gstatic.com/s/opensans/v36/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTSCmu0SC55K5gw.woff2) format('woff2');unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+0300-0301,U+0303-0304,U+0308-0309,U+0323,U+0329,U+1EA0-1EF9,U+20AB}@font-face{font-family:'Open Sans';font-style:normal;font-weight:600;font-stretch:100%;font-display:swap;src:url(https://fonts.gstatic.com/s/opensans/v36/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTSGmu0SC55K5gw.woff2) format('woff2');unicode-range:U+0100-02AF,U+0304,U+0308,U+0329,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF}@font-face{font-family:'Open Sans';font-style:normal;font-weight:600;font-stretch:100%;font-display:swap;src:url(https://fonts.gstatic.com/s/opensans/v36/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTS-mu0SC55I.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-family:'Open Sans';font-style:normal;font-weight:700;font-stretch:100%;font-display:swap;src:url(https://fonts.gstatic.com/s/opensans/v36/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTSKmu0SC55K5gw.woff2) format('woff2');unicode-range:U+0460-052F,U+1C80-1C88,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F}@font-face{font-family:'Open Sans';font-style:normal;font-weight:700;font-stretch:100%;font-display:swap;src:url(https://fonts.gstatic.com/s/opensans/v36/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTSumu0SC55K5gw.woff2) format('woff2');unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}@font-face{font-family:'Open Sans';font-style:normal;font-weight:700;font-stretch:100%;font-display:swap;src:url(https://fonts.gstatic.com/s/opensans/v36/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTSOmu0SC55K5gw.woff2) format('woff2');unicode-range:U+1F00-1FFF}@font-face{font-family:'Open Sans';font-style:normal;font-weight:700;font-stretch:100%;font-display:swap;src:url(https://fonts.gstatic.com/s/opensans/v36/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTSymu0SC55K5gw.woff2) format('woff2');unicode-range:U+0370-03FF}@font-face{font-family:'Open Sans';font-style:normal;font-weight:700;font-stretch:100%;font-display:swap;src:url(https://fonts.gstatic.com/s/opensans/v36/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTS2mu0SC55K5gw.woff2) format('woff2');unicode-range:U+0590-05FF,U+200C-2010,U+20AA,U+25CC,U+FB1D-FB4F}@font-face{font-family:'Open Sans';font-style:normal;font-weight:700;font-stretch:100%;font-display:swap;src:url(https://fonts.gstatic.com/s/opensans/v36/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTSCmu0SC55K5gw.woff2) format('woff2');unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+0300-0301,U+0303-0304,U+0308-0309,U+0323,U+0329,U+1EA0-1EF9,U+20AB}@font-face{font-family:'Open Sans';font-style:normal;font-weight:700;font-stretch:100%;font-display:swap;src:url(https://fonts.gstatic.com/s/opensans/v36/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTSGmu0SC55K5gw.woff2) format('woff2');unicode-range:U+0100-02AF,U+0304,U+0308,U+0329,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF}@font-face{font-family:'Open Sans';font-style:normal;font-weight:700;font-stretch:100%;font-display:swap;src:url(https://fonts.gstatic.com/s/opensans/v36/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTS-mu0SC55I.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-family:'PT Sans';font-style:normal;font-weight:400;font-display:swap;src:url(https://fonts.gstatic.com/s/ptsans/v17/jizaRExUiTo99u79D0-ExcOPIDUg-g.woff2) format('woff2');unicode-range:U+0460-052F,U+1C80-1C88,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F}@font-face{font-family:'PT Sans';font-style:normal;font-weight:400;font-display:swap;src:url(https://fonts.gstatic.com/s/ptsans/v17/jizaRExUiTo99u79D0aExcOPIDUg-g.woff2) format('woff2');unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}@font-face{font-family:'PT Sans';font-style:normal;font-weight:400;font-display:swap;src:url(https://fonts.gstatic.com/s/ptsans/v17/jizaRExUiTo99u79D0yExcOPIDUg-g.woff2) format('woff2');unicode-range:U+0100-02AF,U+0304,U+0308,U+0329,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF}@font-face{font-family:'PT Sans';font-style:normal;font-weight:400;font-display:swap;src:url(https://fonts.gstatic.com/s/ptsans/v17/jizaRExUiTo99u79D0KExcOPIDU.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-family:'PT Sans';font-style:normal;font-weight:700;font-display:swap;src:url(https://fonts.gstatic.com/s/ptsans/v17/jizfRExUiTo99u79B_mh0OOtLR8a8zILig.woff2) format('woff2');unicode-range:U+0460-052F,U+1C80-1C88,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F}@font-face{font-family:'PT Sans';font-style:normal;font-weight:700;font-display:swap;src:url(https://fonts.gstatic.com/s/ptsans/v17/jizfRExUiTo99u79B_mh0OqtLR8a8zILig.woff2) format('woff2');unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}@font-face{font-family:'PT Sans';font-style:normal;font-weight:700;font-display:swap;src:url(https://fonts.gstatic.com/s/ptsans/v17/jizfRExUiTo99u79B_mh0OCtLR8a8zILig.woff2) format('woff2');unicode-range:U+0100-02AF,U+0304,U+0308,U+0329,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF}@font-face{font-family:'PT Sans';font-style:normal;font-weight:700;font-display:swap;src:url(https://fonts.gstatic.com/s/ptsans/v17/jizfRExUiTo99u79B_mh0O6tLR8a8zI.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-family:'Roboto';font-style:normal;font-weight:300;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmSU5fCRc4AMP6lbBP.woff2) format('woff2');unicode-range:U+0460-052F,U+1C80-1C88,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F}@font-face{font-family:'Roboto';font-style:normal;font-weight:300;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmSU5fABc4AMP6lbBP.woff2) format('woff2');unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}@font-face{font-family:'Roboto';font-style:normal;font-weight:300;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmSU5fCBc4AMP6lbBP.woff2) format('woff2');unicode-range:U+1F00-1FFF}@font-face{font-family:'Roboto';font-style:normal;font-weight:300;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmSU5fBxc4AMP6lbBP.woff2) format('woff2');unicode-range:U+0370-03FF}@font-face{font-family:'Roboto';font-style:normal;font-weight:300;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmSU5fCxc4AMP6lbBP.woff2) format('woff2');unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+0300-0301,U+0303-0304,U+0308-0309,U+0323,U+0329,U+1EA0-1EF9,U+20AB}@font-face{font-family:'Roboto';font-style:normal;font-weight:300;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmSU5fChc4AMP6lbBP.woff2) format('woff2');unicode-range:U+0100-02AF,U+0304,U+0308,U+0329,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF}@font-face{font-family:'Roboto';font-style:normal;font-weight:300;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmSU5fBBc4AMP6lQ.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-family:'Roboto';font-style:normal;font-weight:400;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v30/KFOmCnqEu92Fr1Mu72xKKTU1Kvnz.woff2) format('woff2');unicode-range:U+0460-052F,U+1C80-1C88,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F}@font-face{font-family:'Roboto';font-style:normal;font-weight:400;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v30/KFOmCnqEu92Fr1Mu5mxKKTU1Kvnz.woff2) format('woff2');unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}@font-face{font-family:'Roboto';font-style:normal;font-weight:400;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v30/KFOmCnqEu92Fr1Mu7mxKKTU1Kvnz.woff2) format('woff2');unicode-range:U+1F00-1FFF}@font-face{font-family:'Roboto';font-style:normal;font-weight:400;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v30/KFOmCnqEu92Fr1Mu4WxKKTU1Kvnz.woff2) format('woff2');unicode-range:U+0370-03FF}@font-face{font-family:'Roboto';font-style:normal;font-weight:400;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v30/KFOmCnqEu92Fr1Mu7WxKKTU1Kvnz.woff2) format('woff2');unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+0300-0301,U+0303-0304,U+0308-0309,U+0323,U+0329,U+1EA0-1EF9,U+20AB}@font-face{font-family:'Roboto';font-style:normal;font-weight:400;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v30/KFOmCnqEu92Fr1Mu7GxKKTU1Kvnz.woff2) format('woff2');unicode-range:U+0100-02AF,U+0304,U+0308,U+0329,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF}@font-face{font-family:'Roboto';font-style:normal;font-weight:400;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v30/KFOmCnqEu92Fr1Mu4mxKKTU1Kg.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-family:'Roboto';font-style:normal;font-weight:500;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmEU9fCRc4AMP6lbBP.woff2) format('woff2');unicode-range:U+0460-052F,U+1C80-1C88,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F}@font-face{font-family:'Roboto';font-style:normal;font-weight:500;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmEU9fABc4AMP6lbBP.woff2) format('woff2');unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}@font-face{font-family:'Roboto';font-style:normal;font-weight:500;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmEU9fCBc4AMP6lbBP.woff2) format('woff2');unicode-range:U+1F00-1FFF}@font-face{font-family:'Roboto';font-style:normal;font-weight:500;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmEU9fBxc4AMP6lbBP.woff2) format('woff2');unicode-range:U+0370-03FF}@font-face{font-family:'Roboto';font-style:normal;font-weight:500;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmEU9fCxc4AMP6lbBP.woff2) format('woff2');unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+0300-0301,U+0303-0304,U+0308-0309,U+0323,U+0329,U+1EA0-1EF9,U+20AB}@font-face{font-family:'Roboto';font-style:normal;font-weight:500;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmEU9fChc4AMP6lbBP.woff2) format('woff2');unicode-range:U+0100-02AF,U+0304,U+0308,U+0329,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF}@font-face{font-family:'Roboto';font-style:normal;font-weight:500;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmEU9fBBc4AMP6lQ.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-family:'Roboto';font-style:normal;font-weight:700;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmWUlfCRc4AMP6lbBP.woff2) format('woff2');unicode-range:U+0460-052F,U+1C80-1C88,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F}@font-face{font-family:'Roboto';font-style:normal;font-weight:700;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmWUlfABc4AMP6lbBP.woff2) format('woff2');unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}@font-face{font-family:'Roboto';font-style:normal;font-weight:700;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmWUlfCBc4AMP6lbBP.woff2) format('woff2');unicode-range:U+1F00-1FFF}@font-face{font-family:'Roboto';font-style:normal;font-weight:700;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmWUlfBxc4AMP6lbBP.woff2) format('woff2');unicode-range:U+0370-03FF}@font-face{font-family:'Roboto';font-style:normal;font-weight:700;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmWUlfCxc4AMP6lbBP.woff2) format('woff2');unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+0300-0301,U+0303-0304,U+0308-0309,U+0323,U+0329,U+1EA0-1EF9,U+20AB}@font-face{font-family:'Roboto';font-style:normal;font-weight:700;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmWUlfChc4AMP6lbBP.woff2) format('woff2');unicode-range:U+0100-02AF,U+0304,U+0308,U+0329,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF}@font-face{font-family:'Roboto';font-style:normal;font-weight:700;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmWUlfBBc4AMP6lQ.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-family:'Source Sans Pro';font-style:normal;font-weight:300;font-display:swap;src:url(https://fonts.gstatic.com/s/sourcesanspro/v22/6xKydSBYKcSV-LCoeQqfX1RYOo3ik4zwmhdu3cOWxy40.woff2) format('woff2');unicode-range:U+0460-052F,U+1C80-1C88,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F}@font-face{font-family:'Source Sans Pro';font-style:normal;font-weight:300;font-display:swap;src:url(https://fonts.gstatic.com/s/sourcesanspro/v22/6xKydSBYKcSV-LCoeQqfX1RYOo3ik4zwkxdu3cOWxy40.woff2) format('woff2');unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}@font-face{font-family:'Source Sans Pro';font-style:normal;font-weight:300;font-display:swap;src:url(https://fonts.gstatic.com/s/sourcesanspro/v22/6xKydSBYKcSV-LCoeQqfX1RYOo3ik4zwmxdu3cOWxy40.woff2) format('woff2');unicode-range:U+1F00-1FFF}@font-face{font-family:'Source Sans Pro';font-style:normal;font-weight:300;font-display:swap;src:url(https://fonts.gstatic.com/s/sourcesanspro/v22/6xKydSBYKcSV-LCoeQqfX1RYOo3ik4zwlBdu3cOWxy40.woff2) format('woff2');unicode-range:U+0370-03FF}@font-face{font-family:'Source Sans Pro';font-style:normal;font-weight:300;font-display:swap;src:url(https://fonts.gstatic.com/s/sourcesanspro/v22/6xKydSBYKcSV-LCoeQqfX1RYOo3ik4zwmBdu3cOWxy40.woff2) format('woff2');unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+0300-0301,U+0303-0304,U+0308-0309,U+0323,U+0329,U+1EA0-1EF9,U+20AB}@font-face{font-family:'Source Sans Pro';font-style:normal;font-weight:300;font-display:swap;src:url(https://fonts.gstatic.com/s/sourcesanspro/v22/6xKydSBYKcSV-LCoeQqfX1RYOo3ik4zwmRdu3cOWxy40.woff2) format('woff2');unicode-range:U+0100-02AF,U+0304,U+0308,U+0329,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF}@font-face{font-family:'Source Sans Pro';font-style:normal;font-weight:300;font-display:swap;src:url(https://fonts.gstatic.com/s/sourcesanspro/v22/6xKydSBYKcSV-LCoeQqfX1RYOo3ik4zwlxdu3cOWxw.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-family:'Source Sans Pro';font-style:normal;font-weight:400;font-display:swap;src:url(https://fonts.gstatic.com/s/sourcesanspro/v22/6xK3dSBYKcSV-LCoeQqfX1RYOo3qNa7lujVj9_mf.woff2) format('woff2');unicode-range:U+0460-052F,U+1C80-1C88,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F}@font-face{font-family:'Source Sans Pro';font-style:normal;font-weight:400;font-display:swap;src:url(https://fonts.gstatic.com/s/sourcesanspro/v22/6xK3dSBYKcSV-LCoeQqfX1RYOo3qPK7lujVj9_mf.woff2) format('woff2');unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}@font-face{font-family:'Source Sans Pro';font-style:normal;font-weight:400;font-display:swap;src:url(https://fonts.gstatic.com/s/sourcesanspro/v22/6xK3dSBYKcSV-LCoeQqfX1RYOo3qNK7lujVj9_mf.woff2) format('woff2');unicode-range:U+1F00-1FFF}@font-face{font-family:'Source Sans Pro';font-style:normal;font-weight:400;font-display:swap;src:url(https://fonts.gstatic.com/s/sourcesanspro/v22/6xK3dSBYKcSV-LCoeQqfX1RYOo3qO67lujVj9_mf.woff2) format('woff2');unicode-range:U+0370-03FF}@font-face{font-family:'Source Sans Pro';font-style:normal;font-weight:400;font-display:swap;src:url(https://fonts.gstatic.com/s/sourcesanspro/v22/6xK3dSBYKcSV-LCoeQqfX1RYOo3qN67lujVj9_mf.woff2) format('woff2');unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+0300-0301,U+0303-0304,U+0308-0309,U+0323,U+0329,U+1EA0-1EF9,U+20AB}@font-face{font-family:'Source Sans Pro';font-style:normal;font-weight:400;font-display:swap;src:url(https://fonts.gstatic.com/s/sourcesanspro/v22/6xK3dSBYKcSV-LCoeQqfX1RYOo3qNq7lujVj9_mf.woff2) format('woff2');unicode-range:U+0100-02AF,U+0304,U+0308,U+0329,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF}@font-face{font-family:'Source Sans Pro';font-style:normal;font-weight:400;font-display:swap;src:url(https://fonts.gstatic.com/s/sourcesanspro/v22/6xK3dSBYKcSV-LCoeQqfX1RYOo3qOK7lujVj9w.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-family:'Source Sans Pro';font-style:normal;font-weight:600;font-display:swap;src:url(https://fonts.gstatic.com/s/sourcesanspro/v22/6xKydSBYKcSV-LCoeQqfX1RYOo3i54rwmhdu3cOWxy40.woff2) format('woff2');unicode-range:U+0460-052F,U+1C80-1C88,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F}@font-face{font-family:'Source Sans Pro';font-style:normal;font-weight:600;font-display:swap;src:url(https://fonts.gstatic.com/s/sourcesanspro/v22/6xKydSBYKcSV-LCoeQqfX1RYOo3i54rwkxdu3cOWxy40.woff2) format('woff2');unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}@font-face{font-family:'Source Sans Pro';font-style:normal;font-weight:600;font-display:swap;src:url(https://fonts.gstatic.com/s/sourcesanspro/v22/6xKydSBYKcSV-LCoeQqfX1RYOo3i54rwmxdu3cOWxy40.woff2) format('woff2');unicode-range:U+1F00-1FFF}@font-face{font-family:'Source Sans Pro';font-style:normal;font-weight:600;font-display:swap;src:url(https://fonts.gstatic.com/s/sourcesanspro/v22/6xKydSBYKcSV-LCoeQqfX1RYOo3i54rwlBdu3cOWxy40.woff2) format('woff2');unicode-range:U+0370-03FF}@font-face{font-family:'Source Sans Pro';font-style:normal;font-weight:600;font-display:swap;src:url(https://fonts.gstatic.com/s/sourcesanspro/v22/6xKydSBYKcSV-LCoeQqfX1RYOo3i54rwmBdu3cOWxy40.woff2) format('woff2');unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+0300-0301,U+0303-0304,U+0308-0309,U+0323,U+0329,U+1EA0-1EF9,U+20AB}@font-face{font-family:'Source Sans Pro';font-style:normal;font-weight:600;font-display:swap;src:url(https://fonts.gstatic.com/s/sourcesanspro/v22/6xKydSBYKcSV-LCoeQqfX1RYOo3i54rwmRdu3cOWxy40.woff2) format('woff2');unicode-range:U+0100-02AF,U+0304,U+0308,U+0329,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF}@font-face{font-family:'Source Sans Pro';font-style:normal;font-weight:600;font-display:swap;src:url(https://fonts.gstatic.com/s/sourcesanspro/v22/6xKydSBYKcSV-LCoeQqfX1RYOo3i54rwlxdu3cOWxw.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-family:'Source Sans Pro';font-style:normal;font-weight:700;font-display:swap;src:url(https://fonts.gstatic.com/s/sourcesanspro/v22/6xKydSBYKcSV-LCoeQqfX1RYOo3ig4vwmhdu3cOWxy40.woff2) format('woff2');unicode-range:U+0460-052F,U+1C80-1C88,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F}@font-face{font-family:'Source Sans Pro';font-style:normal;font-weight:700;font-display:swap;src:url(https://fonts.gstatic.com/s/sourcesanspro/v22/6xKydSBYKcSV-LCoeQqfX1RYOo3ig4vwkxdu3cOWxy40.woff2) format('woff2');unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}@font-face{font-family:'Source Sans Pro';font-style:normal;font-weight:700;font-display:swap;src:url(https://fonts.gstatic.com/s/sourcesanspro/v22/6xKydSBYKcSV-LCoeQqfX1RYOo3ig4vwmxdu3cOWxy40.woff2) format('woff2');unicode-range:U+1F00-1FFF}@font-face{font-family:'Source Sans Pro';font-style:normal;font-weight:700;font-display:swap;src:url(https://fonts.gstatic.com/s/sourcesanspro/v22/6xKydSBYKcSV-LCoeQqfX1RYOo3ig4vwlBdu3cOWxy40.woff2) format('woff2');unicode-range:U+0370-03FF}@font-face{font-family:'Source Sans Pro';font-style:normal;font-weight:700;font-display:swap;src:url(https://fonts.gstatic.com/s/sourcesanspro/v22/6xKydSBYKcSV-LCoeQqfX1RYOo3ig4vwmBdu3cOWxy40.woff2) format('woff2');unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+0300-0301,U+0303-0304,U+0308-0309,U+0323,U+0329,U+1EA0-1EF9,U+20AB}@font-face{font-family:'Source Sans Pro';font-style:normal;font-weight:700;font-display:swap;src:url(https://fonts.gstatic.com/s/sourcesanspro/v22/6xKydSBYKcSV-LCoeQqfX1RYOo3ig4vwmRdu3cOWxy40.woff2) format('woff2');unicode-range:U+0100-02AF,U+0304,U+0308,U+0329,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF}@font-face{font-family:'Source Sans Pro';font-style:normal;font-weight:700;font-display:swap;src:url(https://fonts.gstatic.com/s/sourcesanspro/v22/6xKydSBYKcSV-LCoeQqfX1RYOo3ig4vwlxdu3cOWxw.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}</style></head><body><div class="page-bootstrapping" style="font-size:210px;color:transparent;position:absolute;text-align:center;user-select:none;z-index:-1;word-break:break-all;height:500px;width:100%;overflow:hidden;font-family:none">Resume-Now content</div><div id="__next" data-reactroot=""><style type="text/css">
+        .preloader-overlay {
+            background: #fff;
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            z-index: 99999;
+            top: 0;
+        }
+
+        .preloader-wrapper {
+            position: fixed;
+            width: auto;
+            left: 50%;
+            top: 50%;
+            margin: -180px 0 0 -133px;
+        }
+
+        .animation-fold {
+            margin: 20px auto 0;
+            overflow: hidden;
+            position: relative;
+            height: 105px;
+        }
+
+        .loading {
+            font-family: 'Source Sans Pro',sans-serif;
+            font-size: 15px;
+            font-weight: 400;
+            color: #000;
+            position: relative;
+            -webkit-animation: Loader 7s forwards;
+            animation: Loader 7s 16s forwards;
+            animation-delay: 1s;
+            letter-spacing: .4px;
+        }
+
+            .loading .seven, .loading .six {
+                animation-duration: 4s;
+                animation-fill-mode: forwards;
+            }
+
+            .loading > div {
+                margin-bottom: 12px;
+                font-family: 'Source Sans Pro';
+                letter-spacing: .4px;
+            }
+
+            .loading div:first-child {
+                margin-top: 35px;
+            }
+
+            .loading > div span {
+                font-size: 12px;
+                padding: 5px 4px;
+                font-style: normal;
+                margin-right: 15px;
+                background-color: #fff;
+                color: #fd9031;
+                background-repeat: no-repeat;
+                background-position: 50% 48%;
+                border: 1px solid #fd9031;
+                border-radius: 20px;
+                width: 23px;
+                height: 23px;
+                vertical-align: middle;
+            }
+
+        .gradient, .top-content-hide {
+            position: absolute;
+            width: 100%;
+        }
+
+        .loading .first {
+            animation-name: firstDiv;
+            animation-duration: 4s;
+            animation-delay: 0s;
+        }
+
+        .loading .second {
+            animation-name: secondDiv;
+            animation-duration: 4s;
+            animation-delay: 1s;
+        }
+
+        .loading .third {
+            animation-name: thirdDiv;
+            animation-duration: 4s;
+            animation-delay: 2s;
+        }
+
+        .loading .four {
+            animation-name: fourDiv;
+            animation-duration: 4s;
+            animation-delay: 3s;
+        }
+
+        .loading .five {
+            animation-name: fiveDiv;
+            animation-duration: 4s;
+            animation-delay: 4s;
+        }
+
+        .loading .six {
+            animation-name: sixDiv;
+            animation-delay: 5s;
+        }
+
+        .loading .seven {
+            animation-name: sevenDiv;
+            animation-delay: 6s;
+        }
+
+        .top-content-hide {
+            background: #3d4c61;
+            top: 0;
+            z-index: 5;
+            height: 15px;
+        }
+
+        .gradient {
+            height: 35px;
+            left: 0;
+            bottom: 0;
+        }
+
+        .grad-top {
+            top: 0;
+            height: 50px;
+            z-index: 1;
+            background: -moz-linear-gradient(top,rgba(255,255,255,1) 0,rgba(255,255,255,0) 100%);
+            background: -webkit-linear-gradient(top,rgba(255,255,255,1) 0,rgba(255,255,255,0) 100%);
+            background: linear-gradient(to bottom,rgba(255,255,255,1) 0,rgba(255,255,255,0) 100%);
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#00ffffff', GradientType=0);
+        }
+
+        .grad-bottom {
+            background: -moz-linear-gradient(top,rgba(255,255,255,0) 0,rgba(255,255,255,1) 100%);
+            background: -webkit-linear-gradient(top,rgba(255,255,255,0) 0,rgba(255,255,255,1) 100%);
+            background: linear-gradient(to bottom,rgba(255,255,255,0) 0,rgba(255,255,255,1) 100%);
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff', GradientType=0);
+        }
+
+        @keyframes Loader {
+            0% {
+                top: 0;
+            }
+
+            14.2% {
+                top: -35.6px;
+            }
+
+            28.4% {
+                top: -71.3px;
+            }
+
+            42.6% {
+                top: -107px;
+            }
+
+            56.6% {
+                top: -142px;
+            }
+
+            71% {
+                top: -178px;
+            }
+
+            100% {
+                top: -180.6px;
+            }
+        }
+
+        @keyframes firstDiv {
+            0% {
+                background-color: #fd9031;
+                color: #fff;
+                background-repeat: no-repeat;
+                background-position: 50% 48%;
+            }
+        }
+
+        @keyframes secondDiv {
+            14.2% {
+                background-color: #fd9031;
+                color: #fff;
+            }
+        }
+
+        @keyframes thirdDiv {
+            28.4% {
+                background-color: #fd9031;
+                color: #fff;
+            }
+        }
+
+        @keyframes fourDiv {
+            42.6% {
+                background-color: #fd9031;
+                color: #fff;
+            }
+        }
+
+        @keyframes fiveDiv {
+            56.6% {
+                background-color: #fd9031;
+                color: #fff;
+            }
+        }
+
+        @keyframes sixDiv {
+            71% {
+                background-color: #fd9031;
+                color: #fff;
+            }
+        }
+
+        @keyframes sevenDiv {
+            100% {
+                background-color: #fd9031;
+                color: #fff;
+            }
+        }
+
+        /*** Short Loading Animation **/
+        .overlay-loader-short {
+            width: 100%;
+            height: 100%;
+            position: fixed;
+            z-index: 12000;
+            pointer-events: all;
+            top: 0;
+            background: rgba(255,255,255,0.85);
+        }
+
+        .loader-content {
+            width: 215px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            text-align: center;
+            line-height: 63px;
+            margin: -190px 0 0 -106px;
+        }
+
+            .loader-content .logo-wrap {
+                height: 97px;
+            }
+
+            .loader-content .short-logo-icon {
+                display: block;
+                height: 45px;
+                margin-left: 17px;
+            }
+
+            .loader-content .loading-text {
+                opacity: 0;
+                font-family: 'Source Sans Pro';
+                font-size: 18px;
+                text-transform: uppercase;
+                width: 215px;
+                color: #333;
+                font-weight: 400;
+            }
+        /* div#overlayLoader{background:0 0}*/
+        @keyframes spin {
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        .spinner-circle {
+            position: relative;
+            width: 46px;
+            height: 46px;
+            margin: 10px auto 0;
+            background-image: linear-gradient(to right,#1fbba6 0,#f8c236 100%);
+            border-radius: 100%;
+            animation: spin 1s infinite linear;
+        }
+
+        .spinner-circle-gradient, .spinner-circle-inner {
+            position: absolute;
+            width: 38px;
+            height: 38px;
+            transform: translate(-50%,-50%);
+        }
+
+        .spinner-circle-inner {
+            top: 50%;
+            left: 50%;
+            background-color: #fff;
+            border-radius: 100%;
+        }
+
+        .spinner-circle-gradient {
+            top: -5px;
+            left: 13px;
+            width: 19px;
+            height: 15px;
+            background: #fff;
+            transform: rotate(-45deg);
+        }
+
+        .blur {
+            -webkit-filter: blur(5px);
+            -moz-filter: blur(5px);
+            -o-filter: blur(5px);
+            -ms-filter: blur(5px);
+            filter: blur(5px);
+        }
+
+        .disable-scroll {
+            overflow: hidden;
+        }
+
+        .d-none {
+            display: none !important;
+        }
+
+        .invisible {
+            visibility: hidden !important;
+        }
+        .loading-lcp{
+            font-size: 25rem;
+            color: transparent;
+            margin-top: 100px;
+            text-align: center;
+            -webkit-user-select: none;
+            user-select: none;
+        }
+        /* New Animated Loader css */
+        .loader-header {
+            max-width: 117rem;
+            margin: auto;
+            height: 6.4rem;
+            padding-left: 1.5rem;
+            padding-right: 1.5rem;
+            display: flex;
+            align-items: center;
+        }
+
+            .loader-header img {
+                width: 16rem;
+                height: 2rem;
+            }
+
+        .loader-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 75vh;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+        }
+
+        .loader-logo{
+            display: grid;
+            display:-ms-grid;
+            grid-gap: 0.6rem;
+            transform: skew(-9deg);
+        }
+        .loader-logo span{
+            display: block;
+            width: 1.1rem;
+            height: 1.1rem;
+            animation: loaderwave 1.1s ease-in-out 0s infinite forwards;
+        }
+        .ie11 .loader-logo span{
+            margin: 0.3rem;
+        }
+        .loader-logo span:nth-child(1){
+            background-color: #ffd9a2;
+            grid-row: 1;
+            grid-column: 3;
+            -ms-grid-row:1;
+            -ms-grid-column:3;
+        }
+        .loader-logo span:nth-child(n + 2){
+            background-color: #fd9031;
+            grid-row: 2;
+            -ms-grid-row:2
+        }
+        .loader-logo span:nth-child(2){
+            grid-column: 2;
+            -ms-grid-column:2;
+        }
+        .loader-logo span:nth-child(3){
+            grid-column: 3;
+            -ms-grid-column:3;
+        }
+        .loader-logo span:nth-child(n+4){
+            background-color: #ff6e05;
+            grid-row: 3;
+            -ms-grid-row:3
+        }
+        .loader-logo span:nth-child(5){
+            grid-column:2;
+            -ms-grid-column:2;
+        }
+        .loader-logo span:nth-child(6){
+            grid-column:3;
+            -ms-grid-column:3;
+        }
+        .loader-logo .wave2{
+            animation-delay: 0.2s;
+        }
+        .loader-logo .wave3{
+            animation-delay: 0.4s;
+        }
+
+        @keyframes loaderwave {
+            0% {
+                transform: scale(1);
+            }
+
+            30% {
+                transform: scale(1.28);
+            }
+
+            60% {
+                transform: scale(1);
+            }
+        }
+
+        .loader-container .loading-text {
+            margin-top: 1rem;
+            margin-bottom: 2.2rem;
+            color: #000;
+            font-family: "Frank Ruhl Libre",serif;
+            font-size: 2.4rem;
+            font-weight: 900;
+            line-height: 1.5;
+        }
+
+        .content-container .group {
+            padding: 1.1rem 0;
+            display: flex;
+            align-items: center;
+        }
+
+            .content-container .group:last-child {
+                padding-bottom: 0;
+            }
+
+        .content-container .tick-mark-container {
+            margin-right: 1.8rem;
+            display: inline-block;
+            position: relative;
+            width: 2.5rem;
+            height: 2.5rem;
+            border: 0.2rem solid #ffd9a2;
+            border-radius: 50%;
+        }
+
+        .content-container .tick-content {
+            color: #000;
+            font-family: "Roboto",sans-serif;
+            font-size: 2rem;
+            font-weight: 700;
+            letter-spacing: 0;
+            line-height: 2.4rem;
+        }
+
+        .content-container .sub-container {
+            width: 2.5rem;
+            height: 2.5rem;
+            background-color: #ffd9a2;
+            top: -0.2rem;
+            border-radius: 50%;
+            right: 0.2rem;
+            transform: scale(0);
+            position: relative;
+            animation: zoomIn 0.25s linear 0s forwards;
+        }
+
+        .content-container .second .sub-container {
+            animation-delay: 0.4s;
+        }
+
+        .content-container .third .sub-container {
+            animation-delay: 0.8s;
+        }
+
+        .content-container .fourth .sub-container {
+            animation-delay: 1.2s;
+        }
+
+        .content-container .tick-mark {
+            padding: 0.7rem;
+            color: #ff6e05;
+            font-weight: 400;
+            font-family: "Font Awesome 5 Pro",sans-serif;
+            display: inline-block;
+            font-style: normal;
+            font-size: 1.1rem;
+            line-height: 1.2rem;
+            opacity: 0;
+            animation: fadeInOut 0.2s linear 0s forwards;
+        }
+
+        .content-container .tick-mark::before {
+            content: "\f00c";
+        }
+
+        .content-container .first .tick-mark {
+            animation-delay: 0.2s;
+        }
+
+        .content-container .second .tick-mark {
+            animation-delay: 0.5s;
+        }
+
+        .content-container .third .tick-mark {
+            animation-delay: 0.9s;
+        }
+
+        .content-container .fourth .tick-mark {
+            animation-delay: 1.3s;
+        }
+
+        @keyframes zoomIn {
+            0% {
+                transform: scale(0);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        @keyframes fadeInOut {
+            0% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+        @font-face{
+            font-family:'Century Gothic';
+            font-weight:normal;
+            font-style:normal;
+            src:local('Century Gothic'),
+                url('/blobcontent/lcintl/fonts/CenturyGothic.ttf') format('truetype')
+        }
+        @font-face{
+            font-family:'Century Gothic';
+            font-weight:bold;
+            font-style:normal;
+            src:local('Century Gothic Bold'),
+                url('/blobcontent/lcintl/fonts/CenturyGothicBold.ttf') format('truetype')
+        }
+        @font-face{
+            font-family:'Century Gothic';
+            font-weight:bold;
+            font-style:italic;
+            src:local('Century Gothic Bold Italic'),
+                url('/blobcontent/lcintl/fonts/CenturyGothicBoldItalic.ttf') format('truetype')
+        }
+        @font-face{
+            font-family:'Century Gothic';
+            font-weight:normal;
+            font-style:italic;
+            src:local('Century Gothic Italic'),
+                url('/blobcontent/lcintl/fonts/CenturyGothicItalic.ttf') format('truetype')
+        }
+        </style><div class="preloader-overlay d-none" id="longLoader"><div class="loading-lcp">Livecareer</div><div class="preloader-wrapper"><div class="logo-wrap"><img id="imgBtnLongLogo" alt="Livecareer Logo" src="https://www.livecareer.es/blobimages/les/builder/images/lc-logo-v3-dark.svg"/></div><div class="animation-fold"><div class="gradient grad-top"></div><div class="loading"><div><span class="fas fa-check first"></span>Cargando 20 diseños de CV profesionales</div> <div><span class="fas fa-check second"></span>Cargando 64 282 muestras predefinidas</div> <div><span class="fas fa-check third"></span>Cargando 152 consejos de redacción</div> <div><span class="fas fa-check four"></span>Cargando ayuda del servicio de atención al cliente</div> <div><span class="fas fa-check five"></span>Cargando fuentes y herramientas de diseño</div> <div id="dvFinished"><span class="fas fa-check six"></span>Listo</div> </div><div class="gradient grad-bottom"></div></div></div></div><div class="preloader-overlay d-none" id="longLoaderNew"><header class="loader-header"><img alt="Livecareer Logo" id="longLoaderLogo" src="https://www.livecareer.es/blobimages/les/builder/images/lc-logo-v3-dark.svg"/></header><div class="loading-lcp">Livecareer</div><div class="loader-container"><div class="loader-logo"><span class="wave3"></span><span class="wave3"></span><span class="wave2"></span><span class="wave3"></span><span class="wave2"></span><span class="wave1"></span></div><div class="loading-text">Cargando...</div><div class="content-container"><div class="group" aria-hidden="true"><div class="tick-mark-container first"><div class="sub-container"><span class="tick-mark"></span></div></div><span id="tick-template" class="tick-content">Más de 32 diseños profesionales de CV</span></div><div class="group" aria-hidden="true"><div class="tick-mark-container second"><div class="sub-container"><span class="tick-mark"></span></div></div><span class="tick-content">Más de 100000 frases predefinidas</span></div><div class="group" aria-hidden="true"><div class="tick-mark-container third"><div class="sub-container"><span class="tick-mark"></span></div></div><span class="tick-content">Más de 15000 pestos de trabajo</span></div><div id="dvFinished" class="group" aria-hidden="true"><div class="tick-mark-container fourth"><div class="sub-container"><span class="tick-mark"></span></div></div><span id="tick-color" class="tick-content">9 opciones de color disponibles</span></div></div></div></div><div class="overlay-loader-short d-none" id="shortLoader"><div class="loader-content"><div class="logo-wrap"><span class="short-logo-icon"><img id="imgBtnShortLogo" alt="Livecareer Logo" src="https://www.livecareer.es/blobimages/les/builder/images/lc-logo-v3-dark.svg"/></span><p class="loading-text" id="shortLoadingAnimation">Preparando tu CV...</p> </div><div class="spinner-circle"><div class="spinner-circle-gradient"></div><div class="spinner-circle-inner"></div></div></div></div><div id="page-loader" class="page-loader-overlay invisible"><div class="loader-img"><h6 class="h6 font-weight-semibold">CARGANDO...</h6> </div></div><div id="howItWorks" class="d-none page-wrapper page-hiw sticky "><header class="header"><div class="container"><nav class="navbar"><a class="navbar-brand p-none navbar-brand-light"></a><ul class="nav"><li class="nav-item"><a class="nav-link" href="/contact-us"><span class="fas fa-comment fs-14 icon-contact"></span>Contacto</a></li> </ul></nav></div></header><div class="container"><div class="jumbotron"><div class="jumbotron-header"><div class="page-title"><h1 id="hiw-header-link" class="h1 p-title text-center pointerEvents-none">
+                    <a href="javascript:void(0)" onclick="startApp(event);">Cómo crear un currículum <br/> <span class='text-orange'>en minutos</span></a>
+                    </h1> </div></div><div class="jumbotron-body"><div class="step-group"><div class="step-item"><span class="step-round"><span class="step-count">1</span><span class="icon-sprite icon-template"></span></span><p id="hiwStep1" class="step-title">Selecciona la plantilla de diseño <br/>profesional que más te guste</p> </div><div class="step-item"><span class="step-round"><span class="step-count">2</span><span class="icon-sprite icon-example"></span></span><p id="hiwStep2" class="step-title">Añade a cada sección los textos <br/>predefinidos que ponemos a tu disposición</p> </div><div class="step-item"><span class="step-round"><span class="step-count">3</span><span class="icon-sprite icon-download"></span></span><p id="hiwStep3" class="step-title">Descarga el documento y empieza <br/>a presentar tu candidatura</p> </div><span class="thick-border-left clearfix"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></div></div><div class="jumbotron-footer text-center"><button id="btnGetStarted" class="btn btn-primary btn-lg" onclick="startApp(event);">EMPEZAR</button>
+                        <p class="text-xs" id="toupv">
+                        Al hacer clic en Empezar, aceptas nuestros <a class="link" href="/information/termsofuse.aspx" onclick="termConditions(event);">Términos de uso</a> y nuestra <a class="link" href="/information/privacy.aspx" onclick="privacyPolicy(event)">Política de privacidad</a>.
+                        </p>
+                        </div></div></div><footer class="footer"><div class="container"><div class="primary-footer"><ul class="list-inline list-separator footer-nav"><li class="list-item"><a href="/information/termsofuse.aspx" class="list-link" title="Terms and Conditions" target="_blank" rel="noreferrer">Términos y condiciones</a></li><li class="list-item"><a href="/information/privacy.aspx" class="list-link" title="Privacy Policy" target="_blank" rel="noreferrer">Política de privacidad</a></li><li class="list-item"><a href="/information/contact.aspx" target="_blank" rel="noreferrer" class="list-link" title="Contact Us">Contacto</a></li></ul><div class="footer-right ml-auto"><p class="copyright">© 2023, Bold Limited. Reservados todos los derechos.</p></div></div></div></footer></div><main id="app" role="main"></main><div id="dvHidden" style="display:none"> </div><div id="afterLoadContent" class="d-none"></div><script>function startShortLoader() {
+                            document.getElementById("shortLoader").classList.remove("d-none");
+                            document.getElementById("mainForm").classList.add("blur");
+                            document.getElementsByTagName("body")[0].classList.add("disable-scroll");
+                            setTimeout(function () {
+                                document.getElementById("shortLoadingAnimation").style.opacity = "1";
+                            }, 1);
+                        }
+                        function startLongLoader() {
+                            if('les' === 'lit' ||'les' === 'lpl' || 'undefined' === 'true'){
+                                document.getElementById("longLoader").classList.remove("d-none");
+                            document.getElementsByTagName("body")[0].classList.add("disable-scroll");
+                            }
+                            else if('les' === 'les'){
+                                if(!window.RDL.disableHIW && !window.RDL.enableNewAnimationLoader){
+                                    document.getElementById("longLoader").classList.remove("d-none");
+                                    document.getElementsByTagName("body")[0].classList.add("disable-scroll");
+                                }
+                            }
+                            else if('les' === 'luk'){
+                                if(!window.RDL.disableHIW && !window.RDL.enableNewAnimationLoader){
+                                    document.getElementById("longLoaderNew").classList.remove("d-none");
+                                    document.getElementsByTagName("body")[0].classList.add("disable-scroll");
+                                    window.RDL.enableNewAnimationLoader=true;
+                                    }
+                            }
+                            else{
+                                document.getElementById("longLoaderNew").classList.remove("d-none");
+                                document.body.classList.add("disable-scroll");
+                                window.RDL.enableNewAnimationLoader=true;
+                            }
+                        }
+                
+                        function closeLongLoader() {
+                            document.getElementById("longLoader").classList.add("d-none");
+                            document.getElementsByTagName("body")[0].classList.remove("disable-scroll");
+                        }
+                        function closeShortLoader() {
+                            document.getElementById("shortLoader").classList.add("d-none");
+                            document.getElementById("mainForm").classList.remove("blur");
+                            document.getElementsByTagName("body")[0].classList.remove("disable-scroll");
+                        }
+                        function updateTextForMx() {
+                            if (document.querySelector("#hiw-header-link")) {
+                            document.querySelector("#hiw-header-link").innerHTML = "Cómo crear un CV <br> <span class='text-orange'>en minutos</span>";
+                            }
+                            if (document.querySelector("#hiwStep1")) {
+                            document.querySelector("#hiwStep1").innerHTML = "Selecciona tu plantilla de diseño <br>profesional";
+                            }
+                            if (document.querySelector("#hiwStep2")) {
+                            document.querySelector("#hiwStep2").innerHTML = "Añade textos predefinidos <br>en cada sección";
+                            }
+                            if (document.querySelector("#hiwStep3")) {
+                            document.querySelector("#hiwStep3").innerHTML = "Descarga tu CV y empieza <br>a postularte";
+                            }
+                        }
+
+                        document.getElementsByTagName("html")[0].classList.add("body-bg-gradient");
+                        function RedirectToReferrer() {
+                            if (document.referrer != "") {
+                                window.location.href = document.referrer;
+                            }
+                            else {
+                                window.location.href = "https://" + window.location.hostname.split('.')[0] + ".myperfectresume.com"
+                            }
+                        }
+                
+                            var hiwSocialProofInterval = setInterval(function () {
+                                if (document.querySelector('.section-counter')) {
+                                    clearInterval(hiwSocialProofInterval);
+                            var odometerJs = document.createElement('script');
+                                        odometerJs.setAttribute("src", "https://assets.livecareer.fr/blobcontent/lcintl/scripts/counter-animation.js");
+                                        document.head.appendChild(odometerJs);
+
+                                    function click_containerInner(){
+                                        var element = document.getElementById("containerInner");
+                                            element.classList.toggle("collapse-section-counter");
+                                        return true;
+                                    }
+                                    
+                                    function custom_count() {
+                                            var elementsList = document.querySelectorAll('.section-counter');
+                                            for (var i = 0; i < elementsList.length; i++) {
+                                            if (isInViewport(undefined,0,0)) {   // Here we check perticular section is in the viewport or number-counter-section                        
+                                                    /* FOR number counter(odometer)  */
+                                                    var arr = [];
+                                                    var eList = document.querySelectorAll('.progress-odometer .digit-block');
+                                                    for (var j = 0; j < eList.length; j++) {
+                                                        arr[j] = eList[j].getAttribute('data-count');    
+                                                            counter7.innerText = arr[0];
+                                                            counter8.innerText = arr[1];
+                                                            counter9.innerText = arr[2];
+                                                            counter10.innerText = arr[3];
+                                                    }                         
+                                                    
+                                                } else {}
+                                            }
+                                        }
+                                        function isInViewport(el, topScreenPercent, bottonScreenPercent) {
+                                            el =document.querySelector('.progress-odometer');
+                                            var scroll = window.scrollY || window.pageYOffset;
+                                            var boundsTop = el.getBoundingClientRect().top + scroll;
+                                var viewport = {
+                                    top: scroll + (window.innerHeight * topScreenPercent / 100),
+                                    bottom: scroll + window.innerHeight - (window.innerHeight * bottonScreenPercent / 100)
+                                };
+                                var bounds = {
+                                    top: boundsTop,
+                                    bottom: boundsTop + el.clientHeight
+                                };
+                                return (bounds.bottom >= viewport.top && bounds.bottom <= viewport.bottom)
+                                    || (bounds.top <= viewport.bottom && bounds.top >= viewport.top);
+                            }
+
+                            function getRandomInt(min, max) {
+                            return Math.floor(Math.random() * (max - min) + min);
+                            }
+
+                                        setInterval(function () {
+                                            custom_count();
+                                        }, 1000); 
+                                        var currentCvs = 931; // total average time in seconds 15:31
+                                        var temp_rand_num = getRandomInt(931,1798);
+                                        currentCvs = temp_rand_num;
+                                        function showCurrentlyCreatedCV() {
+                                            currentCvs = getRandomInt(931,1798);
+                                            var minutes = Math.floor(currentCvs / 60);
+                                            var seconds = currentCvs - (minutes * 60);
+                                            if(minutes < 15){
+                                                minutes = 15;
+                                            } else if(minutes > 29){
+                                                minutes = 29;
+                                            }
+                                            if(seconds > 60){
+                                                seconds = 59;
+                                            }
+                                            var str_seconds = seconds.toString();
+                                            if (str_seconds && str_seconds.length == 1) {
+                                                str_seconds = "0" + str_seconds;
+                                            }
+                                            var strCurrentCvs = minutes.toString()+str_seconds.toString();
+                                            currentCvsArr = strCurrentCvs.split('');
+                                            var counters = document.querySelectorAll('.digit-block');
+                                            for (var i = 0; i < counters.length; i++) {
+                                                counters[i].setAttribute('data-count', currentCvsArr[i]);
+                                            }
+                                        }
+                                        showCurrentlyCreatedCV();
+                                        setInterval(showCurrentlyCreatedCV, 2000);
+                            if(document.getElementById("containerInner")){
+                            document.getElementById("containerInner").addEventListener("click", click_containerInner);
+                            }
+
+                            var checkLongLoaderDisplay = setInterval(function () {
+                                if (document.getElementById("longLoaderNew") && document.getElementById("longLoaderNew").classList.contains("d-none")) {
+                                    clearInterval(checkLongLoaderDisplay);
+                                setTimeout(function(){
+                                var element = document.getElementById("containerInner");
+                                if(element)
+                                    element.classList.toggle("collapse-section-counter");
+                                }, 1000);         
+                                }
+                            }, 100);
+
+                                }
+                            }, 2000);
+
+                </script><script>
+      window.RDL = window.RDL || {};
+      window.RDL.headerUrl = 'https://www.livecareer.es/blobimages/les/builder/images/logo.png';
+      var versionNumber = '1.0.0.18';
+      var packageUrl = 'https://assets.livecareer.es/crear-cv/build/rbrwz/main.bundle-1.0.0.18.js';
+      var isRWZFlow=true; var isJoshuaTreeINTL=true;startLongLoader()
+    </script></div><script id="__NEXT_DATA__" type="application/json">{"props":{"pageProps":{"model":{"favIconUrl":"/favicon.ico","loaderLogoUrl":"https://www.livecareer.es/blobimages/les/builder/images/lc-logo-v3-dark.svg","cssBundleUrl":"https://assets.livecareer.es/crear-cv/build/stylesheets/rbrwz/les/main-1.0.0.18.css","jsBundleScript":"\n      window.RDL = window.RDL || {};\n      window.RDL.headerUrl = 'https://www.livecareer.es/blobimages/les/builder/images/logo.png';\n      var versionNumber = '1.0.0.18';\n      var packageUrl = 'https://assets.livecareer.es/crear-cv/build/rbrwz/main.bundle-1.0.0.18.js';\n      var isRWZFlow=true; var isJoshuaTreeINTL=true;startLongLoader()\n    ","baseUrl":"https://assets.livecareer.es/blobcontent/","isRWZTestConduct":false,"deviceType":"desktop","countryCD":"US","currentYear":"2023","experimentVariant":"","isRBRWZTestConduct":false,"isRBRWZMobileTestConduct":false,"isJoshuaTree":true,"PortalInfo":"","resourceData":{"clickingAgreeMobile":"Al hacer clic en Empezar, aceptas nuestros {0} y nuestra {1}","clickingAgreeDesktop":"Al hacer clic en Empezar, aceptas nuestros {0} y nuestra {1}.","footerCopy":"© {0}, Bold Limited. Reservados todos los derechos.","footerPrivacy":"Política de privacidad","footerTerms":"Términos y condiciones","headerNavCntc":"Contacto","hiwGetStarted":"EMPEZAR","hiwStep1":"Selecciona la plantilla de diseño \u003cbr/\u003eprofesional que más te guste","hiwStep1Mobile":"Elige tu plantilla \u003cbr/\u003ede diseño profesional","hiwStep2":"Añade a cada sección los textos \u003cbr/\u003epredefinidos que ponemos a tu disposición","hiwStep3":"Descarga el documento y empieza \u003cbr/\u003ea presentar tu candidatura","hiwTitle":"Cómo crear un currículum \u003cbr/\u003e \u003cspan class='text-orange'\u003een minutos\u003c/span\u003e","lbl_and":"y nuestra","loading_txt":"CARGANDO...","longLoader1":"Cargando 20 diseños de CV profesionales","longLoader2":"Cargando 64 282 muestras predefinidas","longLoader3":"Cargando 152 consejos de redacción","longLoader4":"Cargando ayuda del servicio de atención al cliente","longLoader5":"Cargando fuentes y herramientas de diseño","longLoader6":"Listo","mbe_hiwStep2":"Añade ejemplos predefinidos \u003cbr\u003een cada sección","mbe_hiwStep3":"Obtén tu CV y \u003cbr\u003eempieza a solicitar puestos de trabajo","mbe_hiwTitle":"Cómo crear un CV con el que \u003cspan class='text-highlight'\u003econseguir el trabajo\u003c/span\u003e","mbe_loading_txt":"Cargando...","rbh_lbl_resumebuilder":"CV Builder","shortLoading":"Preparando tu CV...","termsOfUse":"Términos de uso","htmlTag_lang_key":"es","newlongLoader1":"Más de 32 diseños profesionales de CV","newlongLoader2":"Más de 100000 frases predefinidas","newlongLoader3":"Más de 15000 pestos de trabajo","newlongLoader4":"9 opciones de color disponibles","counterText":"Temps nécessaire au dernier visiteur pour créer son CV avec LiveCareer.","mbe_loadingNew_txt":"Cargando...","longLoaderNew1":"Más de 32 diseños profesionales de CV","longLoaderNew2":"Más de 100 000 frases predefinidas","longLoaderNew3":"Más de 15 000 puestos de trabajo","longLoaderNew4":"9 opciones de color disponibles","hiwHeaderTitleMx":"Cómo crear un CV \u003cbr\u003e \u003cspan class='text-orange'\u003een minutos\u003c/span\u003e","hiwStep1Mx":"Selecciona tu plantilla de diseño \u003cbr\u003eprofesional","hiwStep2Mx":"Añade textos predefinidos \u003cbr\u003een cada sección","hiwStep3Mx":"Descarga tu CV y empieza \u003cbr\u003ea postularte"},"portal":{"culture":"es-ES","url":"livecareer.es","portalUrl":"livecareer.es","slug":"/crear-cv","basePath":"/crear-cv","portalCd":"les","productCd":"rsm","viewName":"","defaultSkin":"MLL2","portalId":"22","gtmKey1":"GTM-MNPFQ6L","gtmKey2":"GTM-PBL3F6X","newRelicId":"135377353","blobRepo":"https://configservicestorage.blob.core.windows.net/livecareerrepository/","blobRepoTest":"https://configservicestoragetest.blob.core.windows.net/livecareerrepository/","blobContentDevURL":"lccontentdev.blob.core.windows.net/","rewriteBlobContent":true,"removeOptionsCall":true,"removeVulnerableText":true,"useFileNamingConvention":true,"isOmnibusBaselined":true,"excludefloatingReg":false,"excludeSkillRecommendation":false,"preventSpellCheckFreeze":true,"getFeatureCodes":false,"loadClientExperimentJS":true,"useTipPageRouting":true,"commonSegment":true,"avoidloadingsvg":true,"useExperienceRouting":true,"imageOptimizationRewrite":true,"ebBaseUrl":"https://www.livecareer.es/eb/","useAssetsPath":true},"metricConfiguration":"{MuCfg:{enableWebVitals:true}}","environment":"www","hostName":"www.livecareer.es","refererlp":null,"assetUrl":"https://assets.livecareer.es","UIExperimentURL":"https://assets.livecareer.es/ui-experimentation/les/experiment.js","portalInfo":{"culture":"es-ES","url":"livecareer.es","portalUrl":"livecareer.es","slug":"/crear-cv","basePath":"/crear-cv","portalCd":"les","productCd":"rsm","viewName":"","defaultSkin":"MLL2","portalId":"22","gtmKey1":"GTM-MNPFQ6L","gtmKey2":"GTM-PBL3F6X","newRelicId":"135377353","blobRepo":"https://configservicestorage.blob.core.windows.net/livecareerrepository/","blobRepoTest":"https://configservicestoragetest.blob.core.windows.net/livecareerrepository/","blobContentDevURL":"lccontentdev.blob.core.windows.net/","rewriteBlobContent":true,"removeOptionsCall":true,"removeVulnerableText":true,"useFileNamingConvention":true,"isOmnibusBaselined":true,"excludefloatingReg":false,"excludeSkillRecommendation":false,"preventSpellCheckFreeze":true,"getFeatureCodes":false,"loadClientExperimentJS":true,"useTipPageRouting":true,"commonSegment":true,"avoidloadingsvg":true,"useExperienceRouting":true,"imageOptimizationRewrite":true,"ebBaseUrl":"https://www.livecareer.es/eb/","useAssetsPath":true},"addUserClaims":true,"isINTL":true,"appScriptSrc":"https://assets.livecareer.es/crear-cv/scripts/rbrwz/app-1.0.0.18.js","experimentName":"Experiment: ","variantName":""},"viewBag":{"UserClaims":"","PortalInfo":"","addUserClaims":""},"deviceType":"desktop","resolvedUrl":"/","query":{"slug":["anadir-seccion"]},"host":"resumebuildernext.livecareer.es","header":{"accept":"*/*","host":"resumebuildernext.livecareer.es","user-agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/118.0","accept-encoding":"gzip","accept-language":"es-MX,es;q=0.8,en-US;q=0.5,en;q=0.3","cache-control":"no-cache, max-age=0","cookie":"ismobile=False; lp=LESRSMLP07; isssl=True; visitinfo=[City,Pachuca]\u0026[State,HID]\u0026[Country,MX]\u0026[PostalCode,42050]\u0026[BrowserName,Firefox]\u0026[BrowserVersion,118.0]\u0026[DeviceType,]\u0026[OSName,Windows]\u0026[DeviceModel,Unknown]\u0026[OSVersion,10.0]; vstr=b0e268ff-28dd-4637-a16c-692abc069c90; ref=3; vsuid=c8ce9273-e482-4009-804e-4263cb857e8b; vsutms=13c90a89-4728-40e8-9982-a0176f0c5fa0#b0e268ff-28dd-4637-a16c-692abc069c90#c8ce9273-e482-4009-804e-4263cb857e8b#1696221598#https://google.com#google|sem|210548227|estructura+de+un+curriculum+vitae|; vssessionuid=f86bb725-e971-4873-8d11-92673295e026; UTMFirstTouchCookie=saveUTM_Campaign_First_Touch-210548227#saveUTM_Medium_First_Touch-sem#saveUTM_Source_First_Touch-google#saveUTM_Term_First_Touch-estructura de un curriculum vitae; UTMLastTouchCookie=saveUTM_Campaign_Last_Touch-210548227#saveUTM_Medium_Last_Touch-sem#saveUTM_Source_Last_Touch-google#saveUTM_Term_Last_Touch-estructura de un curriculum vitae; x-georegion=143,MX,DIF,MEXICOCITY,,,,,,19.43,-99.14,CST,,NA,uninet,dsl,8151,vhigh,5000; _gcl_aw=GCL.1696221600.CjwKCAjwseSoBhBXEiwA9iZtxo5P_cT0wVa4LeD5RzwxOBLmS01OC0t0sWKdKFkPE_la8AeSQyacdhoC-PgQAvD_BwE; _gcl_au=1.1.33008008.1696221600; vstrType=1; _ga_1KP40CS074=GS1.1.1696221706.1.1.1696225909.8.0.0; _ga=GA1.1.2054720741.1696221707; ajs_anonymous_id=10c943fa-19b9-42af-9d9e-eed58c651c2e; mixpanelprops=%7B%22%24os%22%3A%22Windows%22%2C%22%24browser%22%3A%22Firefox%22%2C%22%24current_url%22%3A%22https%3A//www.livecareer.es/crear-cv/anadir-seccion%22%2C%22%24browser_version%22%3A118%2C%22%24screen_height%22%3A768%2C%22%24screen_width%22%3A1366%2C%22mp_lib%22%3A%22Segment%3A%20web%22%2C%22%24lib_version%22%3A%222.47.0%22%2C%22%24insert_id%22%3A%22cdtvqbqk0mmybbfe%22%2C%22time%22%3A1696225908%2C%22distinct_id%22%3A%22%24device%3A18aeeb13f2e1ace6-08122b906562ae-d5d5429-100200-18aeeb13f2e1ace6%22%2C%22%24device_id%22%3A%2218aeeb13f2e1ace6-08122b906562ae-d5d5429-100200-18aeeb13f2e1ace6%22%2C%22%24search_engine%22%3A%22google%22%2C%22utm_source%22%3A%22google%22%2C%22utm_medium%22%3A%22sem%22%2C%22utm_campaign%22%3A%22210548227%22%2C%22utm_term%22%3A%22estructura%20de%20un%20curriculum%20vitae%22%2C%22%24initial_referrer%22%3A%22https%3A//www.google.com/%22%2C%22%24initial_referring_domain%22%3A%22www.google.com%22%2C%22device%20type%22%3A%22desktop%22%2C%22%24user_id%22%3A%2265a07f49-2ce6-4ff4-ad82-4ea4149115ea%22%2C%22mp_name_tag%22%3A%2265a07f49-2ce6-4ff4-ad82-4ea4149115ea%22%2C%22userId%22%3A%2265a07f49-2ce6-4ff4-ad82-4ea4149115ea%22%2C%22id%22%3A%2265a07f49-2ce6-4ff4-ad82-4ea4149115ea%22%2C%22%24email%22%3A%22castillogalindomontserrat84@gmail.com%22%2C%22%24first_name%22%3A%22MONTSERRAT%22%2C%22%24last_name%22%3A%22CASTILLO%20GALINDO%22%2C%22%24name%22%3A%22MONTSERRAT%20CASTILLO%20GALINDO%22%2C%22Platform%22%3A%22Web%22%7D; Auth=bsqO5_fDaVT7T5CREczacosgh_aywHN5JCAtC86VjHs6Vr2vfFASFD92o9x7YmWBDG16eipsqX4s-mFJa_zIgIQQtPOIg3Jtt0gFaDdUxmAs02K7kfz6KkzIGwhxdfGlZP9hQuz5Rd3j9t3LU6ggqYSXfbKkhscTwWlFBTrTFfgOgyeSwhm9d4gOIpsToxdh4248rsqZnE9pAJXwxN5PvYIfBdeF7eKw-XA7B7jJHwOg0iPtw1USgDshHJOEkdichfBF-8TUel-AuYrz2xytAxD5PTL0iSBsLGyYQXqcmB8e8ikecjo8VYIRdabQ3MfXg-Q74vqy2Dpb3aTYl0h2RRYBTMkmQ2USrJCHD1a-U26hkSRSiwBsGizpy2TrZz-glRZCwIPIIBhKrRRErEZjfLisWLWrnHiLAN4sEXEPhlTS-DHZjmH6Op3G8VqjGuntthRwMl3pCWXkOFV3OtGs0qnkW4_9YVZy-D462t-qzFSuae64SKuEdTJDEZaS6bUVJ3OZ0rJXq7mjFC-iiZSNhN6kYbK9gfU13KlDPjrM7UGbL2DD2kWz22O-96SwNGuRGc7SjUwNdMaQ5J6NOJFvCF_0pmDZQwPuC_vU1QSsi_ddp9Opidrw77FrgDptBDQK85Ex6p9-R3axn1lENrhZpsaHW_QywdzQ2kik87vNM-XQuSemcFRKdIpkz2ck8Wmhcy0UoygVLQerrv12D0hglDEyywsQuhHa2h6CbKRU4r-hNZdcFCSiHvOppv49WnTx6jQW4jM_S8Qn2JEWUz7Pg3rdFIoAQL6dqszCg4JlgiCZ9pbABdU4_k8Ty_92xvLi-cQctWOJjtuStzb3UMX5n1JkcXfUhNDb70Bim3j3HmIciADgOpsNmp34BAcMZ2nUC9t67dM96TwDrq-a_OksqrW2vP-a3oobBWKN4ZZ3Ur-emegsc1NUssJ6xB9laBCisOb1X_wib-prCdrNyYvkcWTqR4UYhNxM52kjbCUjRwenBiACiiXt7zAigAbkRh7vK95Bv7NhXadaSmwwBXm_rvhtX2dDAqYH-uskQ1WtSumntisYBiz_0T4EkoVrGFZQRFdnsLpr7uynBFMYfUBjZfsHfN-ZNoY3xwPNrgbFKZFwAvQvTwUC0vdZRcsCTZJ4OAIci8ZmK79qc-6sDiFp2fJm2H_tOUs3q0bwhRVgIyh8TUxGB_WkMLXux1_2BZb5FOi8QDB_Vh61mCypKuRLkqX7-_QdvuAMQyA6nyH2nK2g71_-aiTwAUWN65jL_IuYVjkD-x2nfVasdFBccL_VmPV05pTmvP0KJn-2hLgKGdBzo82C7Vw7h8nb9HmbxZpUWmuD3J-iBAzN6rmp24-c4TnDcnMhVc1aA3HcCAYiaOOosSP2cwrZDiwzKRkL2kCrCbC7mVYN7IQEp9AhLIwqgRWO7PKK7KXYmPNT79B12E8; UserStatus={\"IsUserLoggedIn\":true,\"User\":{\"Role\":1,\"UserId\":\"65a07f49-2ce6-4ff4-ad82-4ea4149115ea\",\"AccDisplayName\":\"MONTSERRAT\",\"CreatedOn\":\"02/10/2023 04:42:29\"}}; acc_session={d645a00e-a637-41fb-a70f-338313bc4e00}; fs_user=0; useruid=65a07f49-2ce6-4ff4-ad82-4ea4149115ea; screenWidth=1366; ajs_user_id=65a07f49-2ce6-4ff4-ad82-4ea4149115ea; DocumentID=1ff7eebf-78b0-4c54-ad3d-b502f708ebca; authsigninstate=1; consent=1; _gid=GA1.2.1151757649.1696225860; GAClientID=2054720741.1696221707; isFirstTimeUser=0; _uetsid=fe67c8b060dd11eeab05195aca956a45; _uetvid=fe67c24060dd11ee8509e39d93f2bb28","max-forwards":"10","pragma":"no-cache","via":"1.1 v1-akamaitech.net(ghost) (AkamaiGHost), 1.1 akamai.net(ghost) (AkamaiGHost)","sec-fetch-dest":"empty","sec-fetch-mode":"no-cors","sec-fetch-site":"same-origin","x-akamai-sr-hop":"1","x-akamai-edgescape":"georegion=143,country_code=MX,region_code=DIF,city=MEXICOCITY,lat=19.43,long=-99.14,timezone=CST,continent=NA,throughput=vhigh,bw=5000,network=uninet,asnum=8151,network_type=dsl,location_id=0","true-client-ip":"189.134.41.246","x-akamai-config-log-detail":"true","akamai-origin-hop":"2","x-forwarded-for":"189.134.41.246, 23.200.41.201, 72.246.43.125:53843","x-arr-log-id":"b632cb4f-0de5-44b0-8ac9-9fdec93ee020","client-ip":"72.246.43.125:53843","x-client-ip":"72.246.43.125","disguised-host":"resumebuildernext.livecareer.es","x-site-deployment-id":"prod-resumebuilder-nextjs-lcintl-cc__0782","was-default-hostname":"prod-resumebuilder-nextjs-lcintl-cc.azurewebsites.net","x-forwarded-proto":"https","x-appservice-proto":"https","x-arr-ssl":"2048|256|CN=DigiCert Global G2 TLS RSA SHA256 2020 CA1, O=DigiCert Inc, C=US|CN=bold.com, O=Bold Limited, L=Hamilton, C=BM","x-forwarded-tlsversion":"1.2","x-original-url":"/anadir-seccion","x-waws-unencoded-url":"/anadir-seccion","x-client-port":"53843"},"isMobile":false,"isINTL":true,"isLitePortal":false},"__N_SSP":true},"page":"/","query":{"slug":["anadir-seccion"]},"buildId":"JBZMpNBS7hUbEwMMAyDOO","assetPrefix":"https://assets.livecareer.es/crear-cv/mobile","isFallback":false,"gssp":true,"customServer":true,"scriptLoader":[]}</script></body></html>

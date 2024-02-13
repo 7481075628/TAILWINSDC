@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Canvas xmlns="http://www.jgrasp.org">
+  <Language>Java</Language>
+  <ShowTypes>false</ShowTypes>
+  <Version>2</Version>
+  <Grid>
+    <Snap>true</Snap>
+    <Show>false</Show>
+  </Grid>
+  <Scope id="0">
+    <Name>main</Name>
+    <Signature>([Ljava/lang/String;)V</Signature>
+    <DeclaringType>MusicalSortExample</DeclaringType>
+    <Depth>0</Depth>
+  </Scope>
+  <Frame>
+    <Bounds>
+      <AutoSize>false</AutoSize>
+      <X>70</X>
+      <Y>130</Y>
+      <W>708</W>
+      <H>258</H>
+    </Bounds>
+    <PanelSize>
+      <Key>jgrasp_viewers.java__lang__Object_MusicalBarGraphView0</Key>
+      <Order>4</Order>
+      <W>714</W>
+      <H>290</H>
+    </PanelSize>
+    <Viewer>
+      <ScopeID>0</ScopeID>
+      <Expression>`local int[]` array</Expression>
+      <ViewerClass>jgrasp_viewers.java__lang__Object_MusicalBarGraphView</ViewerClass>
+      <ViewerData>
+        <MinNote>38</MinNote>
+        <MaxNote>83</MaxNote>
+        <MinDuration>122</MinDuration>
+        <MaxDuration>122</MaxDuration>
+        <Instrument>Instrument: Piano 1      bank #0 preset #0</Instrument>
+        <InstrumentName>Piano 1     </InstrumentName>
+      </ViewerData>
+    </Viewer>
+  </Frame>
+  <Frame>
+    <Bounds>
+      <AutoSize>true</AutoSize>
+      <X>70</X>
+      <Y>40</Y>
+      <W>160</W>
+      <H>44</H>
+    </Bounds>
+    <Viewer>
+      <ScopeID>0</ScopeID>
+      <Expression>`local java.lang.String` label</Expression>
+      <ViewerClass>jgrasp_viewers.java__lang__String_FormattedView</ViewerClass>
+    </Viewer>
+  </Frame>
+  <Frame>
+    <Bounds>
+      <AutoSize>false</AutoSize>
+      <X>70</X>
+      <Y>420</Y>
+      <W>708</W>
+      <H>248</H>
+    </Bounds>
+    <PanelSize>
+      <Key>jgrasp_viewers.java__lang__Object_MusicalBarGraphView0</Key>
+      <Order>4</Order>
+      <W>714</W>
+      <H>280</H>
+    </PanelSize>
+    <Viewer>
+      <ScopeID>0</ScopeID>
+      <Expression>`local int[]` copy</Expression>
+      <ViewerClass>jgrasp_viewers.java__lang__Object_MusicalBarGraphView</ViewerClass>
+      <ViewerData>
+        <NoteMode>VALUE_INCREASING</NoteMode>
+        <MinNote>30</MinNote>
+        <MaxNote>84</MaxNote>
+        <Instrument>Instrument: Marimba      bank #0 preset #12</Instrument>
+        <InstrumentName>Marimba     </InstrumentName>
+      </ViewerData>
+    </Viewer>
+  </Frame>
+  <TextBox>
+    <Text>See the MusicalLinkedListSortExample.java file for instructions.</Text>
+    <Position>
+      <X>330</X>
+      <Y>50</Y>
+    </Position>
+  </TextBox>
+  <Size>
+    <W>964</W>
+    <H>850</H>
+  </Size>
+  <ESize>
+    <W>964</W>
+    <H>850</H>
+  </ESize>
+  <Excl>jgraspvex.LinkedList#add
+jgraspvex.LinkedList#printValues
+jgraspvex.LinkedList#swap</Excl>
+</Canvas>

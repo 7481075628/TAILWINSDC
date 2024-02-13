@@ -1,0 +1,16 @@
+import javax.swing.*;
+public class Gui00 {
+// Constantes y componentes (objetos)
+public Gui00(){
+Jframe frame = new Jframe(“Ejemplo 00”);
+// Configurar componentes
+// y añadirlos al panel del frame
+. . .
+frame.pack();
+frame.setVisible(true);
+frame.setDefaultCloseOperation(Jframe.EXIT_ON_CLOSE);
+}
+public static void main(String args[]){
+Gui00 aplicacion = new Gui00();
+}
+}

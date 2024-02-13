@@ -1,0 +1,27 @@
+#!/bin/sh
+CC="@CC@"
+CFLAGS="-O3 -std=c99"
+
+# Startup shell names.
+WEDGE_NAME="sys_run"
+STARTUP_NAME="sys_jgrasp"
+
+# Build the wedge.
+LIBS="@LIBS@"
+DEFINES="@DEFINES@"
+${CC} ${CFLAGS} $DEFINES -o "../internal_bin/$WEDGE_NAME" wedge.c $LIBS
+strip "../internal_bin/$WEDGE_NAME"
+chmod a+rx "../internal_bin/$WEDGE_NAME"
+
+# Build the startup shell if X exists.
+if [ "@HAVE_X@" ]; then
+   XPRELIBS="@X_PRE_LIBS@"
+   XCFLAGS="@X_CFLAGS@"
+   XLIBS="@X_LIBS@"
+   ${CC} ${CFLAGS} ${XCFLAGS} -o "../bin/$STARTUP_NAME" startup_shell.c ${XLIBS} ${XPRELIBS} -lX11
+   strip "../bin/$STARTUP_NAME"
+   chmod a+rx "../bin/$STARTUP_NAME"
+else
+   echo Configure could not locate X11 and Xt libs. Startup shell not built.
+   echo On Linux, installing libxt-dev should fix this.
+fi

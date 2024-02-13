@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Canvas xmlns="http://www.jgrasp.org">
+  <Language>Java</Language>
+  <ShowTypes>false</ShowTypes>
+  <Version>2</Version>
+  <Grid>
+    <Snap>true</Snap>
+    <Show>false</Show>
+  </Grid>
+  <Scope id="0">
+    <Name>main</Name>
+    <Signature>([Ljava/lang/String;)V</Signature>
+    <DeclaringType>IntBinaryTreeExample</DeclaringType>
+    <Depth>0</Depth>
+  </Scope>
+  <Frame>
+    <Bounds>
+      <AutoSize>false</AutoSize>
+      <X>210</X>
+      <Y>230</Y>
+      <W>318</W>
+      <H>394</H>
+    </Bounds>
+    <PanelSize>
+      <Key>jgrasp_viewers.java__lang__Object_LinkedView0</Key>
+      <Order>4</Order>
+      <W>324</W>
+      <H>449</H>
+    </PanelSize>
+    <Viewer>
+      <ScopeID>0</ScopeID>
+      <Expression>`local int[]` ia</Expression>
+      <ViewerClass>jgrasp_viewers.java__lang__Object_LinkedView</ViewerClass>
+      <ViewerData>
+        <StructureData>
+          <Type>BTree</Type>
+          <WrapperExp>(_tree_.length &gt; 0)?0:-1</WrapperExp>
+          <LeftLnkExp>_tree_[_node_]</LeftLnkExp>
+          <RightLnkExp>_tree_[_node_ + 1]</RightLnkExp>
+          <ValueExp>_tree_[_node_ + 2]</ValueExp>
+        </StructureData>
+        <ViewData/>
+      </ViewerData>
+    </Viewer>
+  </Frame>
+  <Size>
+    <W>910</W>
+    <H>1080</H>
+  </Size>
+  <ESize>
+    <W>910</W>
+    <H>1080</H>
+  </ESize>
+</Canvas>

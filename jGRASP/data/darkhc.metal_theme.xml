@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<MetalTheme>
+   <Name>Metal Dark High Contrast</Name>
+   <EditingColorScheme>Dark High Contrast</EditingColorScheme>
+   <Black>
+      <R>255</R>
+      <G>255</G>
+      <B>255</B>
+    </Black>
+   <White>
+      <R>0</R>
+      <G>0</G>
+      <B>0</B>
+    </White>
+   <Primary1>
+      <R>255</R>
+      <G>255</G>
+      <B>255</B>
+    </Primary1>
+   <Primary2>
+      <R>0</R>
+      <G>0</G>
+      <B>0</B>
+    </Primary2>
+   <Primary3>
+      <R>80</R>
+      <G>90</G>
+      <B>255</B>
+    </Primary3>
+   <Secondary1>
+      <R>255</R>
+      <G>255</G>
+      <B>255</B>
+    </Secondary1>
+   <Secondary2>
+      <R>80</R>
+      <G>80</G>
+      <B>80</B>
+    </Secondary2>
+   <Secondary3>
+      <R>0</R>
+      <G>0</G>
+      <B>0</B>
+    </Secondary3>
+   <FocusColor>
+      <R>255</R>
+      <G>0</G>
+      <B>0</B>
+    </FocusColor>
+   <MenuSelectedBackground>
+      <R>80</R>
+      <G>90</G>
+      <B>255</B>
+    </MenuSelectedBackground>
+   <PrimaryControlShadow>
+      <R>0</R>
+      <G>0</G>
+      <B>0</B>
+    </PrimaryControlShadow>
+</MetalTheme>

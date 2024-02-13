@@ -1,0 +1,17 @@
+import java.util.Scanner;
+public class     
+
+public static void main
+
+
+int iNumero = 5 ;
+int iSumatorio = 0 ; 
+int i Contador = iNumero ; 
+
+while ( iContador   ! = 0 {
+   
+   iSumatorio = iSumatorio + iContador ;
+   iContador -- ;
+   
+ }  
+ 
